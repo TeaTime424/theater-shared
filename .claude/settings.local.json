@@ -2,26 +2,33 @@
   "hooks": {
     "SessionStart": [
       {
-        "command": "cd /home/user/theater-shared && git pull origin claude/subwoofer-por-garage-XYlz2 2>/dev/null || true",
-        "description": "Auto-pull latest on session start"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/theater-shared && git pull origin claude/subwoofer-por-garage-XYlz2 2>/dev/null || true"
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
       {
-        "command": "cd /home/user/theater-shared && git pull origin claude/subwoofer-por-garage-XYlz2 2>/dev/null || true",
-        "description": "Auto-pull latest on each user prompt"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/theater-shared && git pull origin claude/subwoofer-por-garage-XYlz2 2>/dev/null || true"
+          }
+        ]
       }
     ],
-    "afterEdit": [
+    "PostToolUse": [
       {
-        "command": "cd /home/user/theater-shared && git add -A && git diff --cached --quiet || (git commit -m \"auto: update files\" && git push -u origin claude/subwoofer-por-garage-XYlz2)",
-        "description": "Auto-commit and push after edit"
-      }
-    ],
-    "afterWrite": [
-      {
-        "command": "cd /home/user/theater-shared && git add -A && git diff --cached --quiet || (git commit -m \"auto: update files\" && git push -u origin claude/subwoofer-por-garage-XYlz2)",
-        "description": "Auto-commit and push after write"
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/theater-shared && git add -A && git diff --cached --quiet || (git commit -m 'auto: update files' && git push -u origin claude/subwoofer-por-garage-XYlz2)"
+          }
+        ]
       }
     ]
   }
