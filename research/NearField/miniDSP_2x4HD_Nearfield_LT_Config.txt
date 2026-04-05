@@ -1,0 +1,250 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# miniDSP 2x4 HD - NEARFIELD SUBWOOFER LINKWITZ TRANSFORM CONFIGURATION
+# V3 CABINET DESIGN
+# ══════════════════════════════════════════════════════════════════════════════
+# 
+# System: 4× Dayton UMII10-22 per cabinet (2s2p = 4Ω)
+#         Sealed cabinet: 48"W × 30"H × 12"D
+#         Net volume: ~5.7 ft³ (~40.3 L per driver)
+#         Fc = 38 Hz, Qtc = 0.88
+# 
+# Target: 95 dB @ 10 Hz at 18" listening distance (tactile bass)
+# 
+# Amplifier: Behringer NX6000 or NX6000D (STEREO MODE)
+#            Real-world power: ~1,000-1,200W per channel @ 10Hz
+#
+# miniDSP: 2x4 HD @ 96 kHz sample rate
+#          (If using Dirac Live @ 48 kHz, recalculate coefficients!)
+#
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════════
+# V3 CABINET PARAMETERS
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# External: 48" W × 30" H × 12" D
+# Net Volume: ~5.7 ft³ (4 drivers)
+# Per Driver: 1.42 ft³ = 40.3 L
+#
+# Sealed Box Response:
+#   Fc = 38.0 Hz (lower than original 43 Hz design)
+#   Qtc = 0.88 (lower than original 1.0)
+#   Natural F3 = ~32 Hz (without EQ)
+#
+# Linkwitz Transform:
+#   Transforms Fc=38Hz, Qtc=0.88 → Fp=10Hz, Qp=0.707
+#   Boost @ 10 Hz: +19.5 dB (vs +21.6 dB for original design)
+#   Lower boost = better power headroom!
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SIGNAL FLOW (Per Couch)
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# ┌─────────────────┐
+# │  Summed Sub     │
+# │  Signal (Mono)  │
+# └────────┬────────┘
+#          │ 1× Analog (XLR or RCA)
+#          ▼
+# ┌─────────────────────────────────────────────────────────────────┐
+# │                    miniDSP 2x4 HD                               │
+# │                                                                 │
+# │  INPUT 1 ──► [LT + HPF Biquads] ──► OUTPUT 1 ──► NX6000 CH.A   │
+# │                                     OUTPUT 2 ──► NX6000 CH.B   │
+# │                                                                 │
+# │  INPUT 2     (unused)               OUTPUT 3     (unused)       │
+# │                                     OUTPUT 4     (unused)       │
+# └─────────────────────────────────────────────────────────────────┘
+#          │                                    │
+#          ▼                                    ▼
+# ┌─────────────────────────────────────────────────────────────────┐
+# │                 NX6000 / NX6000D (STEREO MODE)                  │
+# │                                                                 │
+# │     CH.A INPUT                      CH.B INPUT                  │
+# │     (from miniDSP Out 1)            (from miniDSP Out 2)        │
+# │         │                               │                       │
+# │         ▼                               ▼                       │
+# │     ~1,000W @ 10Hz                  ~1,000W @ 10Hz              │
+# │         │                               │                       │
+# │         ▼                               ▼                       │
+# │     CABINET L (4Ω)                  CABINET R (4Ω)              │
+# │     4× UMII10-22 (2s2p)             4× UMII10-22 (2s2p)         │
+# └─────────────────────────────────────────────────────────────────┘
+
+# ══════════════════════════════════════════════════════════════════════════════
+# miniDSP 2x4 HD ROUTING MATRIX
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# INPUT:
+#   Input 1: Summed subwoofer signal (mono)
+#   Input 2: Not used
+#
+# ROUTING MATRIX SETTINGS:
+#   ┌─────────┬──────────┬──────────┬──────────┬──────────┐
+#   │         │ Output 1 │ Output 2 │ Output 3 │ Output 4 │
+#   ├─────────┼──────────┼──────────┼──────────┼──────────┤
+#   │ Input 1 │   ON ✓   │   ON ✓   │   OFF    │   OFF    │
+#   │ Input 2 │   OFF    │   OFF    │   OFF    │   OFF    │
+#   └─────────┴──────────┴──────────┴──────────┴──────────┘
+#
+# POLARITY:
+#   Output 1: Normal (0°)
+#   Output 2: Normal (0°)
+
+# ══════════════════════════════════════════════════════════════════════════════
+# BIQUAD COEFFICIENTS - V3 CABINET - 96 kHz SAMPLE RATE
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Apply these to BOTH Output 1 and Output 2 PEQ sections (Custom Biquad mode)
+#
+# ──────────────────────────────────────────────────────────────────────────────
+# BIQUAD 1: LINKWITZ TRANSFORM (V3)
+# ──────────────────────────────────────────────────────────────────────────────
+# Transforms: Fc=38Hz, Qtc=0.88 → Fp=10Hz, Qp=0.707 (Butterworth)
+# Effect: +19.5 dB boost at 10 Hz to extend sealed cabinet response
+
+[BIQUAD_1_LINKWITZ_TRANSFORM_V3]
+b0 =  1.0009512511
+b1 = -1.9990713825
+b2 =  0.9981263141
+a1 = -1.9990742598
+a2 =  0.9990746880
+
+# ──────────────────────────────────────────────────────────────────────────────
+# BIQUAD 2: SUBSONIC HPF (Section 1 of 2)
+# ──────────────────────────────────────────────────────────────────────────────
+# Butterworth HPF @ 5 Hz, Q = 0.707
+# Combined with Biquad 3 for 24 dB/octave (Linkwitz-Riley alignment)
+
+[BIQUAD_2_SUBSONIC_HPF_1]
+b0 =  0.9997685917
+b1 = -1.9995371834
+b2 =  0.9997685917
+a1 = -1.9995371298
+a2 =  0.9995372369
+
+# ──────────────────────────────────────────────────────────────────────────────
+# BIQUAD 3: SUBSONIC HPF (Section 2 of 2)
+# ──────────────────────────────────────────────────────────────────────────────
+# Identical to Biquad 2, cascaded for 24 dB/octave total
+
+[BIQUAD_3_SUBSONIC_HPF_2]
+b0 =  0.9997685917
+b1 = -1.9995371834
+b2 =  0.9997685917
+a1 = -1.9995371298
+a2 =  0.9995372369
+
+# ══════════════════════════════════════════════════════════════════════════════
+# miniDSP 2x4 HD PASTE FORMAT (REQUIRES NEGATIVE a2)
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# IMPORTANT: miniDSP 2x4 HD uses inverted signs for a1 and a2!
+#   Standard DSP:    H(z) = (b0 + b1*z^-1 + b2*z^-2) / (1 + a1*z^-1 + a2*z^-2)
+#   miniDSP 2x4 HD:  H(z) = (b0 + b1*z^-1 + b2*z^-2) / (1 - a1*z^-1 - a2*z^-2)
+#
+# Copy and paste directly into miniDSP software:
+
+biquad1,
+b0=1.0009512511,
+b1=-1.9990713825,
+b2=0.9981263141,
+a1=1.9990742598,
+a2=-0.9990746880
+
+biquad2,
+b0=0.9997685917,
+b1=-1.9995371834,
+b2=0.9997685917,
+a1=1.9995371298,
+a2=-0.9995372369
+
+biquad3,
+b0=0.9997685917,
+b1=-1.9995371834,
+b2=0.9997685917,
+a1=1.9995371298,
+a2=-0.9995372369
+
+# ══════════════════════════════════════════════════════════════════════════════
+# OUTPUT SETTINGS
+# ══════════════════════════════════════════════════════════════════════════════
+
+[OUTPUT_1_SETTINGS]
+Gain:      0 dB
+Delay:     0 ms
+Polarity:  Normal
+Mute:      OFF
+
+[OUTPUT_2_SETTINGS]
+Gain:      0 dB
+Delay:     0 ms
+Polarity:  Normal
+Mute:      OFF
+
+[INPUT_1_SETTINGS]
+Gain:      0 dB
+PEQ:       All bypassed
+
+# ══════════════════════════════════════════════════════════════════════════════
+# EXPECTED RESPONSE (V3 CABINET)
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# DSP Response (what miniDSP shows):
+#   Frequency    Level
+#   ---------    -----
+#      5 Hz      +16.9 dB
+#     10 Hz      +19.5 dB  ← Target frequency
+#     20 Hz      +10.3 dB
+#     38 Hz       +1.1 dB  ← Cabinet Fc
+#     50 Hz       -0.3 dB
+#     80 Hz       -0.5 dB
+#    100 Hz       -0.4 dB
+#
+# Final Acoustic Response (DSP + sealed box):
+#   F3 (-3dB) ≈ 10 Hz
+#   Flat response 15Hz - 100Hz+
+#   Steep 24dB/oct rolloff below 5 Hz
+
+# ══════════════════════════════════════════════════════════════════════════════
+# V3 vs ORIGINAL COMPARISON
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Parameter         Original        V3 Design       Benefit
+# ---------         --------        ---------       -------
+# Fc                43 Hz           38 Hz           Lower natural rolloff
+# Qtc               1.00            0.88            Flatter passband
+# Volume/driver     21.2 L          40.3 L          Larger cabinet
+# Boost @ 10Hz      +21.6 dB        +19.5 dB        ~2 dB less boost!
+# Power headroom    16 dB           18 dB           Better margins
+#
+# The V3 cabinet requires LESS equalization to achieve the same 10 Hz extension,
+# resulting in better power headroom and reduced amplifier stress.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CABLE CONNECTIONS SUMMARY
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Source → miniDSP 2x4 HD:
+#   Summed sub signal → XLR or RCA → Input 1
+#
+# miniDSP 2x4 HD → NX6000:
+#   Output 1 → XLR cable → NX6000 Channel A Input
+#   Output 2 → XLR cable → NX6000 Channel B Input
+#
+# NX6000 → Cabinets:
+#   Channel A Speakon → Cabinet L (4× UMII10-22, 2s2p, 4Ω)
+#   Channel B Speakon → Cabinet R (4× UMII10-22, 2s2p, 4Ω)
+#
+# NX6000 MODE SWITCH: STEREO
+
+# ══════════════════════════════════════════════════════════════════════════════
+# DOCUMENT HISTORY
+# ══════════════════════════════════════════════════════════════════════════════
+# v1.0 - Initial configuration (Fc=43Hz, Qtc=1.0)
+# v2.0 - Updated for stereo mode, real-world power analysis
+# v2.2 - Simplified signal chain to start from summed input
+# v3.0 - V3 cabinet design (Fc=38Hz, Qtc=0.88, 40.3L/driver)
+#        Recalculated biquads for actual cabinet parameters
+#        ~2 dB less boost = better power headroom
+# ══════════════════════════════════════════════════════════════════════════════

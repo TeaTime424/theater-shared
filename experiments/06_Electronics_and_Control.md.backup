@@ -1,0 +1,221 @@
+# Electronics & Control
+## Home Theater System - Rev 5.2 Extract
+
+**Document Purpose:** AV processor, amplification, signal flow, and calibration.
+
+**Source:** Extracted from Home_Theater_System_Complete_Design_Rev5_2.md
+
+---
+
+## Electronics & Control
+
+### AV Processor
+
+**Model:** Marantz AV10
+- Channels: 9.4.6 processing capability
+- Bass management: 4 independent subwoofer outputs (Dirac ART)
+- Room correction: Dirac Live + Dirac Bass Control + Dirac ART
+- Connectivity: HDMI 2.1, full 8K support (future-proof)
+- Outputs: Balanced XLR preferred for main channels
+- Location: Equipment rack on front stage
+
+### Amplification Summary
+
+**Main Channels (LCR):**
+- Amplifier: Buckeye Hypex NcX500 (rack-mounted, multi-channel)
+- Power: 500W @ 4Ω per channel
+- Channels needed: 3 (L, C, R)
+- Location: Equipment rack on front stage
+
+**Surround & Atmos Channels:**
+- Amplifier: Buckeye Hypex NC252MP (rack-mounted, multi-channel)
+- Power: 200W @ 4Ω per channel (adequate for 96dB sensitivity HT-12s)
+- Channels needed: 2 (side surrounds) + 2 (rear surrounds) + 6 (Atmos) = 10 total
+- Configuration: Multiple NC252MP units or single 10+ channel unit
+- Location: Equipment rack on front stage
+
+**Subwoofers:**
+- Amplifier: Buckeye NC502MP (4-channel, rack-mounted)
+- Power: 450W @ 2Ω per channel
+- Channels: 4 (one per subwoofer)
+- Location: Equipment rack on front stage
+
+**Crowson Transducers:**
+- Amplifier: Buckeye NC252MP (6-channel, rack-mounted)
+- Power: ~160W @ 8Ω per channel
+- Channels: 6 (one per transducer)
+- Location: Equipment rack on front stage
+
+**All amplifiers:**
+- Class D topology (efficient, cool-running)
+- Rack mountable for clean installation
+- Hypex NCore technology (low distortion, high damping factor)
+
+### Signal Flow
+
+### Diagram 2A: Complete Signal Flow (System Overview)
+
+**Purpose:** Visual representation of the complete audio signal path from sources through processing, amplification, and to all speakers and transducers.
+
+```mermaid
+flowchart LR
+    subgraph Sources["Source Components"]
+        Source1["HDMI Sources<br/>Blu-ray<br/>Streaming<br/>Gaming"]
+    end
+    
+    subgraph Processor["AV Processing"]
+        AV10["Marantz AV10<br/>9.4.6 Processor<br/>Dirac Live + ART"]
+    end
+    
+    subgraph Amplification["Amplification Rack"]
+        direction TB
+        NcX500["Buckeye NcX500<br/>LCR Amplifier<br/>500W @ 4Ω × 3ch"]
+        NC252MP_Surr["Buckeye NC252MP<br/>Surrounds<br/>200W @ 4Ω × 4ch"]
+        NC252MP_Atmos["Buckeye NC252MP<br/>Atmos<br/>200W @ 4Ω × 6ch"]
+        PURIFI["PURIFI Monoblocks<br/>4× 1ET9040BA<br/>1200W @ 2Ω each"]
+        NC252MP_Crowson["Buckeye NC252MP<br/>Crowsons<br/>160W @ 8Ω × 6ch"]
+    end
+    
+    subgraph DSP["Bass Management"]
+        MiniDSP["miniDSP Flex HT<br/>4 inputs → 5 outputs<br/>HPF + PEQ + Delay"]
+    end
+    
+    subgraph Speakers["Speaker System"]
+        LCR["LCR - Titan-815LX<br/>3 speakers behind screen"]
+        Surrounds["Surrounds - HT-12<br/>4 speakers"]
+        Atmos["Atmos - Volt-10<br/>6 in-ceiling speakers"]
+    end
+    
+    subgraph Subs["Subwoofer System"]
+        Sub_FL["Front Left Sub<br/>Dual 18 inch sealed"]
+        Sub_FR["Front Right Sub<br/>Dual 18 inch sealed"]
+        Sub_RL["Rear Left Sub<br/>Dual 18 inch sealed"]
+        Sub_RR["Rear Right Sub<br/>Dual 18 inch sealed"]
+    end
+    
+    subgraph Tactile["Tactile System"]
+        Crowsons["6× Crowson Transducers<br/>3 per couch<br/>Embedded in frames"]
+    end
+    
+    Source1 -->|HDMI| AV10
+    AV10 -->|Video| Projector["Projector<br/>170 inch screen"]
+    
+    AV10 -->|"XLR (3ch)"| NcX500
+    AV10 -->|"Analog (4ch)"| NC252MP_Surr
+    AV10 -->|"Analog (6ch)"| NC252MP_Atmos
+    AV10 -->|"4 Discrete LFE"| MiniDSP
+    
+    NcX500 --> LCR
+    NC252MP_Surr --> Surrounds
+    NC252MP_Atmos --> Atmos
+    
+    MiniDSP -->|"Ch 1"| PURIFI
+    MiniDSP -->|"Ch 2"| PURIFI
+    MiniDSP -->|"Ch 3"| PURIFI
+    MiniDSP -->|"Ch 4"| PURIFI
+    MiniDSP -->|"Summed"| NC252MP_Crowson
+    
+    PURIFI -->|"1200W"| Sub_FL
+    PURIFI -->|"1200W"| Sub_FR
+    PURIFI -->|"1200W"| Sub_RL
+    PURIFI -->|"1200W"| Sub_RR
+    
+    NC252MP_Crowson --> Crowsons
+    
+    style AV10 fill:#fff3cd,stroke:#996600,stroke-width:3px
+    style MiniDSP fill:#e1f5ff,stroke:#0066cc,stroke-width:2px
+    style NcX500 fill:#d4edda,stroke:#006600,stroke-width:2px
+    style NC252MP_Surr fill:#d4edda,stroke:#006600,stroke-width:2px
+    style NC252MP_Atmos fill:#d4edda,stroke:#006600,stroke-width:2px
+    style PURIFI fill:#ffe6e6,stroke:#cc0000,stroke-width:2px
+    style NC252MP_Crowson fill:#d4edda,stroke:#006600,stroke-width:2px
+    style LCR fill:#f0f8ff,stroke:#4682b4,stroke-width:2px
+    style Surrounds fill:#f0f8ff,stroke:#4682b4,stroke-width:2px
+    style Atmos fill:#f0f8ff,stroke:#4682b4,stroke-width:2px
+    style Sub_FL fill:#ffe6cc,stroke:#ff9900,stroke-width:2px
+    style Sub_FR fill:#ffe6cc,stroke:#ff9900,stroke-width:2px
+    style Sub_RL fill:#ffe6cc,stroke:#ff9900,stroke-width:2px
+    style Sub_RR fill:#ffe6cc,stroke:#ff9900,stroke-width:2px
+    style Crowsons fill:#f8d7da,stroke:#cc0000,stroke-width:2px
+    style Projector fill:#e1f5ff,stroke:#0066cc,stroke-width:2px
+```
+
+**Signal Path Summary:**
+1. **Sources** → HDMI to AV10 processor
+2. **AV10** → Dirac processing (Live + ART) for all channels
+3. **Video** → HDMI passthrough to projector
+4. **LCR** → XLR outputs to NcX500 amplifier → Titan-815LX speakers
+5. **Surrounds** → Analog outputs to NC252MP → 4× HT-12 speakers
+6. **Atmos** → Analog outputs to NC252MP → 6× Volt-10 speakers
+7. **Subwoofers** → 4 discrete LFE to miniDSP → HPF/DSP → 4 PURIFI monoblocks → 4 subs
+8. **Tactile** → miniDSP summed output → NC252MP → 6 Crowson transducers
+
+**Key Features:**
+- **Dirac ART:** 4 independent subwoofer channels for active room treatment
+- **Class D Amplification:** Efficient, cool-running throughout
+- **PURIFI Monoblocks:** State-of-the-art amplification for subwoofers (fanless)
+- **Balanced XLR:** Premium connection for LCR main channels
+- **miniDSP:** Critical bass management and driver protection (18-20Hz HPF)
+
+---
+
+### Signal Flow Details
+
+**Source ×  AV10 Processor:**
+- HDMI inputs from sources (Blu-ray, streaming, gaming, etc.)
+- Video: Passed through to projector
+- Audio: Decoded to 9.4.6 channels
+
+**AV10 ×  Dirac Processing:**
+- Dirac Live: Full-range correction for all channels
+- Dirac Bass Control: Multi-sub optimization
+- Dirac ART: Active room treatment (4 independent sub outputs)
+
+**AV10 Outputs:**
+- LCR: Balanced XLR to NcX500 amplifier
+- Surrounds (4): Analog to NC252MP amplifier
+- Atmos (6): Analog to NC252MP amplifier(s)
+- Subwoofers (4): Discrete LFE outputs to miniDSP Flex HT
+
+**miniDSP Flex HT Processing:**
+- Input: 4 discrete sub feeds from AV10
+- Processing: High-pass filtering (25-28Hz), PEQ, level, delay
+- Output 1: Front left sub ×  NC502MP channel 1
+- Output 2: Front right sub ×  NC502MP channel 2
+- Output 3: Rear left sub ×  NC502MP channel 3
+- Output 4: Rear right sub ×  NC502MP channel 4
+- Output 5: Summed (1+2+3+4) ×  Crowson amplifier
+
+**Crowson Amplifier:**
+- Input: Summed LFE from miniDSP output 5
+- Outputs: 6 channels to 6 independent Crowson transducers
+
+**Amplifiers ×  Speakers:**
+- All speaker-level connections
+- Proper gauge wire for runs (14-12 AWG typical)
+- Banana plugs or spade terminals
+
+### Professional Calibration
+
+**Recommended:** Expert calibration by qualified engineer
+- Dirac Live measurements (multiple positions)
+- Dirac ART bass optimization
+- Level matching across all channels
+- Verification of high-pass filtering effectiveness
+- SPL verification at MLP (confirm 115 dB capability)
+- Subjective tuning and fine-adjustment
+
+### Projector
+
+**Mounting position:** 15 feet from screen
+**Height:** ~30 inches down from ceiling (90 inches from floor)
+**Budget:** $30,000 (model TBD at time of build)
+**Mounting:** Ceiling mounted
+
+---
+
+---
+
+**Document Version:** 1.0 (Extracted from Rev 5.2) 
+**Created:** November 22, 2025 
+**Source:** Home_Theater_System_Complete_Design_Rev5_2.md (Electronics & Control section)

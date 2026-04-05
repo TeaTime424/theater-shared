@@ -1,0 +1,890 @@
+# Home Theater Project Journal
+## Technical Development Log
+
+---
+
+## 2025-12-15: Amplifier Standardization - Crown XLS 2502 (CORRECTED)
+
+### Session Summary
+Finalized amplifier selection for both main subwoofers and nearfield tactile platform. Standardized on Crown XLS 2502 across both systems for consistency, US warranty support, and proven reliability.
+
+**CORRECTION:** Initial analysis incorrectly assumed dual 4Ω voice coils. Spec sheet confirms **dual 2Ω voice coils** for both UMII18-22 and UMII10-22. This changes the impedance calculations.
+
+### Main Subwoofers (4× Dual UMII18-22)
+
+**Final Selection:** 4× Crown XLS 2502 (bridged @ 8Ω)
+- Power: 1,550W per cabinet, 775W per driver
+- Total: 6,200W RMS
+- Cost: $3,560 (4× $890)
+
+**Wiring Configuration (CORRECTED):**
+- Voice coils: Series (2Ω + 2Ω = 4Ω per driver)
+- Drivers: Series (4Ω + 4Ω = 8Ω per cabinet)
+- Load: 8Ω - required because Crown bridged min = 4Ω, parallel would be 2Ω
+
+**Why not parallel drivers?**
+- Parallel: 4Ω || 4Ω = 2Ω per cabinet
+- Crown XLS 2502 bridged minimum = 4Ω
+- 2Ω below bridged minimum — WON'T WORK
+- Series: 4Ω + 4Ω = 8Ω — within spec
+
+**Key Decision Factors:**
+- 2× XLS 2502 stereo @ 2Ω = 2,400W (600W/driver) - meets target
+- 4× XLS 2502 bridged @ 8Ω = 6,200W (775W/driver) - SELECTED (+0.9 dB headroom)
+- Target was 625W/driver — 775W exceeds by +0.9 dB
+
+### Nearfield Tactile Platform (8× UMII10-22)
+
+**Final Selection:** 2× Crown XLS 2502 (stereo @ 2Ω)
+- Power: 1,200W per channel, 4,800W total
+- Per driver: 600W (2 drivers parallel per channel)
+- Cost: $1,780
+
+**Wiring Configuration:**
+- Voice coils: Series (2Ω + 2Ω = 4Ω per driver)
+- Drivers: Parallel per channel (4Ω || 4Ω = 2Ω)
+- Crown stereo @ 2Ω = 1,200W/ch — within spec (2Ω stereo minimum)
+
+### Alternatives Evaluated & Rejected
+
+| Option | Issue |
+|--------|-------|
+| Behringer NX6000D | Loud fans, questionable QC |
+| Behringer NX6000D + fan mod | Voids warranty |
+| Sanway HT-10QR | No US warranty, China-only service |
+| PURIFI 1ET9040BA | Higher cost, no clear benefit |
+| Buckeye NC502MP | Cooling verification pending |
+
+### Documentation Updates
+- `03_Subwoofer_System.md` - Rewritten with Crown XLS 2502 specs
+- `Subwoofer_Amplifier_Comparison.md` - Added deprecation notice
+
+### Total Amplifier Budget
+- Main subs: 4× XLS 2502 = $3,560 (6,200W total, 775W/driver)
+- Nearfield tactile: 2× XLS 2502 = $1,780 (4,800W total, 600W/driver)
+- **Total: $5,340** (6× Crown XLS 2502, 11,000W combined)
+
+---
+
+## 2025-11-26: Rear Vertical Subwoofer Design - Volume Correction & Documentation
+
+### Session Summary
+Corrected the rear vertical subwoofer enclosure design to achieve ~12.5 ft³ gross internal volume (targeting ~12 ft³ net after displacement). This required increasing external depth from 19" to 22".
+
+### Problem Statement
+Initial design (v4.0) had 10.55 ft³ gross volume. User identified that after accounting for displacement from:
+- Window braces (~0.30 ft³)
+- 2× 18" drivers (~0.35 ft³)  
+- Wiring/electronics (~0.20 ft³)
+- **Total displacement: ~0.85 ft³**
+
+Net volume would be only ~9.7 ft³, below target. Solution: increase depth to achieve 12.5 ft³ gross → ~11.5-12 ft³ net.
+
+### Calculation Method
+```
+Target gross volume: 12.5 ft³ = 21,600 in³
+Internal W × H fixed: 28.5" × 46.5" = 1,325.25 in²
+Required depth: 21,600 ÷ 1,325.25 = 16.30"
+
+External depth = sealed_depth + back_panel + baffle + recess
+               = 16.75" + 0.75" + 1.5" + 3.0" = 22"
+
+Actual volume: 28.5 × 46.5 × 16.75 = 22,198 in³ = 12.85 ft³ ✓
+```
+
+### Key Dimensions (v5.0 Final)
+
+| Parameter | Value |
+|-----------|-------|
+| External | 30"W × 48"H × **22"D** |
+| Sealed depth | **16.75"** |
+| Gross volume | **12.85 ft³** |
+| Net volume | **~12.0 ft³** |
+| Baffle | 28.5" × 46.5" × 1.5" (double layer) |
+| Brace depth | **16.75"** |
+
+### Panel Cut List Changes
+| Panel | Old | New |
+|-------|-----|-----|
+| Top/Bottom | 30" × 19" | 30" × **22"** |
+| Sides | 19" × 46.5" | **22"** × 46.5" |
+| Back | 30" × 48" | unchanged |
+| Baffle (×2) | 28.5" × 46.5" | unchanged |
+
+### Window Brace Updates
+All braces now 16.75" deep (was 13.75"):
+- Horizontal (×3): 26" × 16.75" outer, **22" × 12.75"** window
+- Vertical (×2): 17" × 16.75" outer, **13" × 12.75"** window
+
+### Images Generated
+1. `revised_12.5ft3_crosssection.png` - Side cross-section with specs panel
+2. `revised_brace_cutouts.png` - 6-panel brace cut diagrams
+3. `revised_panel_cutlist.png` - Updated panel dimensions table
+
+### Document Updated
+`Rear_Vertical_Subwoofer_Cutting_Layout.md` → v5.0
+- All dimension references updated
+- ASCII diagrams corrected
+- BOM costs updated (~$180-220/enclosure, ~$760-800 complete)
+- Image reference list expanded
+
+---
+
+## METHODOLOGY NOTES (For Future Iteration)
+
+### Subwoofer Enclosure Design Workflow
+
+**1. Volume Calculation Chain**
+```
+Target NET volume (acoustic requirement)
+  ↓ + displacement allowance (braces, drivers, wiring)
+= Target GROSS volume
+  ↓ ÷ (internal_W × internal_H)
+= Required sealed DEPTH
+  ↓ + back_panel + baffle_thickness + recess
+= External DEPTH
+```
+
+**2. Displacement Estimates (for sealed 18" dual-driver enclosure)**
+- Window braces (5 total): ~0.25-0.35 ft³
+- 18" driver (each): ~0.15-0.20 ft³
+- Wiring/terminals: ~0.15-0.25 ft³
+- **Rule of thumb: ~1.0 ft³ total for dual-18" sealed**
+
+**3. Document Update Strategy**
+When changing a core dimension (like depth), cascade updates to:
+- [ ] External dimensions table
+- [ ] Side cross-section ASCII art
+- [ ] Panel cut list (which panels change?)
+- [ ] Sealed volume calculation block
+- [ ] Brace dimensions (depth changes)
+- [ ] Window cutout dimensions (depth - 4" for 2" borders)
+- [ ] MDF sheet count estimate
+- [ ] BOM costs
+- [ ] Version number and changelog
+
+**4. Image Generation Approach**
+Python + matplotlib works well for:
+- Cross-section diagrams (use Rectangle patches)
+- Brace cut diagrams (show outer + window cutout)
+- Specification summary panels (monospace text boxes)
+
+Key elements for subwoofer diagrams:
+- Color coding: MDF shell, baffle (darker), braces, sealed volume
+- Dimension callouts with arrows (use annotate with arrowprops)
+- Clear labeling of all thicknesses
+- Show both visual and specs side-by-side
+
+**5. Edit Efficiency**
+- Use Python for bulk find/replace when many instances
+- Use Filesystem:edit_file for targeted surgical edits
+- Avoid re-reading/re-writing entire document when possible
+- Group related edits in single edit_file call (multiple oldText/newText pairs)
+
+### Cost Estimation Formula
+```
+MDF cost ≈ sheets × $50-60
+Hardware (T-nuts, screws, binding posts) ≈ $40-50
+Adhesives/sealants ≈ $30-40
+Cleats ≈ $5-10
+─────────────────────────────
+Enclosure materials: $125-160 base + ~$20 per extra 0.5 sheet
+
+For 22" depth enclosure: ~$180-220
+Drivers (2× UMII18-22): $578
+Complete subwoofer: ~$760-800
+```
+
+---
+
+## TRANSCRIPT REFERENCES
+
+- `/mnt/transcripts/2025-11-26-01-39-42-rear-subwoofer-double-baffle-window-bracing.txt`
+  - Double baffle correction (0.75" → 1.5")
+  - Window brace design introduction
+  - v4.0 document creation
+
+- Current session (2025-11-26, later):
+  - Volume correction (10.55 → 12.85 ft³)
+  - Depth increase (19" → 22")
+  - v5.0 document update
+
+---
+
+## PENDING ITEMS
+
+- [ ] Front horizontal subwoofer layout (corner-loaded, different geometry)
+- [ ] Subwoofer amplifier mounting/placement diagram
+- [ ] Wiring diagram for 4-sub system
+- [ ] Integration with main system documentation (Rev5_2.md)
+
+---
+
+## FILE LOCATIONS
+
+**Primary document:**
+`C:\Claude\HT\Rear_Vertical_Subwoofer_Cutting_Layout.md` (v5.0)
+
+**Related images (in outputs):**
+- panel_diagrams.png
+- assembly_sequence.png
+- bracing_layout.png
+- panel_connections.png
+- final_form.png
+- rear_sub_FINAL_corrected.png
+- brace_options.png
+- brace_cut_diagrams.png
+- updated_crosssection.png
+- double_baffle_detail.png
+- revised_12.5ft3_crosssection.png (NEW)
+- revised_brace_cutouts.png (NEW)
+- revised_panel_cutlist.png (NEW)
+
+**Project files:**
+- Home_Theater_System_Complete_Design_Rev5_2.md
+- Speaker_Comparison_HT12_vs_Volt10.md
+- Subwoofer_Amplifier_Comparison.md
+- Media_Player_Poster_Wall_Comparison.md
+
+---
+
+## SESSION: December 15, 2024
+
+### Nearfield Tactile System - Amplifier Selection Update
+
+**Summary:** Revised amplifier recommendation from NX6000D ($500) to NX6000 ($433) after recognizing that Dayton DSP-408 handles all signal processing, making the NX6000D's built-in DSP redundant.
+
+**Key Decision:**
+- DSP-408 centralized architecture: 4 inputs from AV10 → outputs 1-4 to corner subs, outputs 5-6 to nearfield
+- DSP-408 provides 10Hz minimum HPF (better than NX6000D's 20Hz limit)
+- DSP-408 handles summing, crossover, EQ, delay, and limiting
+- NX6000 (non-DSP) provides pure amplification at lower cost
+
+**Cost Savings:**
+- Per unit: $500 → $433 = $67 savings
+- Total (2 units): $134 savings
+- Updated system total: $3,936 (was ~$4,090)
+
+**Files Updated:**
+- `NearField/UMII10-22_Nearfield_System_Specification.md` - v2.0 with revised architecture
+- `NearField/Behringer_NX6000_Amplifier_Analysis.md` - NEW: Detailed comparison NX6000 vs NX6000D
+
+**Files to Delete (Obsolete):**
+- `NearField/Behringer_NX6000D_DSP_Analysis.md` - superseded by new analysis
+
+**Purchase Source:**
+- Thomann: $433/unit (best price, ships to USA)
+- Sweetwater: $449/unit (backordered until Oct 2025)
+- Avoid Amazon: $649 (inflated)
+
+**CORRECTION (same session):**
+- DSP-408 HPF minimum is 20Hz, NOT 10Hz as initially stated
+- Both DSP-408 and NX6000D share the same 20Hz limitation
+- NX6000 recommendation unchanged - DSP is still redundant
+
+**20Hz HPF Workaround (documented):**
+- Use PEQ Low Shelf @ 20Hz with -5dB gain
+- Extends effective HPF to ~14-15Hz
+- Combined with sealed box 12dB/oct rolloff = ~36dB/oct total protection below 20Hz
+- Additional safety: 65% Xmax headroom, compressor/limiter
+
+---
+
+### Nearfield Cabinet Design Plan Created
+
+**File:** `NearField/CABINET_DESIGN_PLAN.md`
+
+**8-Phase Plan:**
+1. Dimensional Analysis & Specifications
+2. Panel Design & Cut List  
+3. Baffle & Driver Layout
+4. Cross-Sections & Bracing
+5. 3D Visualization (OBJ)
+6. Assembly Guide & Build Steps
+7. Furniture Finish & Aesthetics
+8. Documentation & Context
+
+**Key Decisions in Plan:**
+- Recess depth: 2.5" (vs 3" for 18" driver) - driver only 5.98" deep
+- Baffle: 1.5" double-layer (matches front_firing_sub design)
+- Driver array: 4×2 layout
+- Folder structure: mirrors front_firing_sub_8cf
+
+**Open Questions for Phase 1:**
+- UMII10-22 bolt circle diameter (need to verify)
+- Volume shortfall (~1 ft³ short with current 48×18×14" dims)
+- Top surface finish selection
+- Grille/cover design
+
+---
+
+## SESSION: December 20, 2025
+
+### Major Design Change: Nearfield Subwoofers → Aura Pro Bass Shakers
+
+**Decision:** Remove entire nearfield subwoofer system, replace with seat-mounted bass shakers
+
+**Rationale:**
+With 8× UMII18-22 main subs delivering 111.8 dB @ 20Hz, the room is already fully pressurized with reference-level bass. The nearfield system's role (localized bass pressure) was redundant. What's actually needed is direct tactile vibration in the seat for kick/punch/rumble.
+
+**Removed:**
+| Item | Cost |
+|------|------|
+| 16× UMII10-22 drivers | ~$1,600 |
+| 4× quad-10" cabinets (materials) | ~$400 |
+| 4× NX6000D amplifiers | $2,076 |
+| 8× Noctua fans | $120 |
+| **Total removed** | **~$4,196** |
+
+**Added:**
+| Item | Qty | Unit | Total |
+|------|-----|------|-------|
+| Aura Pro AST-2B-4 | 16 | $70 | $1,120 |
+| Dayton BSA-200 | 4 | $150 | $600 |
+| 14 AWG speaker wire | 2 | $15 | $30 |
+| **Total added** | | | **$1,750** |
+
+**Net savings: ~$2,446**
+
+### Amplifier Selection Analysis
+
+**Option A: 4× BSA-200 Distributed (SELECTED)**
+- One amp per 2 seats, hidden under couches
+- Wiring: 2 shakers series (8Ω/seat), 2 seats parallel (4Ω/channel)
+- Fault impact: 2 seats down
+- Independent front/rear level control
+- Power utilization: 40% (excellent headroom)
+- Cost: $600
+
+**Option B: 1× SA1000 Centralized (rejected)**
+- Single amp in rack, complex star wiring
+- All 16 shakers wired to single output (4Ω total)
+- Fault impact: ALL 8 seats down
+- Power utilization: ~120% RMS (needs attenuation)
+- Cost: $560
+
+**Decision:** $40 premium for distributed architecture is worth it for fault tolerance and simpler wiring.
+
+### Files Updated:
+- `03_Subwoofer_System.md` - v2.2, nearfield references removed
+- `11_Budget_Summary.md` - v2.2, new totals (~$68K)
+- `00_Master_Index.md` - v2.1, Rev 5.6
+
+### Files Created:
+- `Tactile_Bass_Shaker_System.md` - Complete bass shaker documentation
+
+### Files Archived:
+- `Nearfield_NX6000_Config.md` → `ARCHIVED_Nearfield_NX6000_Config.md`
+
+### Cumulative Savings (Rev 5.3 → Rev 5.6):
+| Change | Savings |
+|--------|--------|
+| PURIFI → NX6000D | $2,984 |
+| Crowson removal | $2,600 |
+| Nearfield → Shakers | $2,446 |
+| **Total** | **$8,030** |
+
+### Spare Strategy (Updated):
+- 1× NX6000D ($519 + $30 fans) - covers main subs
+- 1× BSA-200 ($150) - covers bass shakers
+- Total spares: $699
+
+### New Budget Estimate: ~$68,000
+(Down from ~$72,000 in Rev 5.5)
+
+---
+
+## 2025-12-21: Bass Shaker Amplification - Rev 5.7
+
+### Session Summary
+Revised bass shaker amplification from distributed BSA-200 amps to single rack-mounted NX6000D in bridged mode. Discovered BSA-200 actual price is $320 (not $150), making NX6000D the clear cost winner.
+
+### Key Price Discovery
+- BSA-200 actual price: **$320** (not $150 as initially documented)
+- 4× BSA-200 = $1,280
+- 1× NX6000D + fans = $549
+- **Savings: $731**
+
+### New Configuration
+
+**1× NX6000D Bridged @ 4Ω:**
+- All 16 shakers on single bridged output
+- Wiring: 4S4P (4 series strings of 4 shakers, in parallel)
+  - Each string: 4 × 4Ω = 16Ω
+  - Four strings parallel: 16Ω ÷ 4 = 4Ω total
+- Power: ~1,600W real-world @ 4Ω bridged
+- Per shaker: 100W (50W rating → -3 dB DSP attenuation)
+
+**Cable Routing:**
+- Single home run: Rack → Front couch (~25ft)
+- Daisy-chain: Front couch → Rear couch (~15ft)
+- Total: ~40ft (vs 65ft with separate runs)
+
+**DSP Configuration:**
+- Output 5: NX6000D #3 bridged → all 16 shakers
+- Level: -3 dB (match shaker power rating)
+- HPF: 20 Hz, 24dB/oct
+- LPF: 80 Hz, 24dB/oct
+- Outputs 6-8: unused
+
+### Unified NX6000D Platform
+
+| Unit | System | Config | Load |
+|------|--------|--------|------|
+| #1 | Main subs FL/FR | Stereo | 8Ω |
+| #2 | Main subs RL/RR | Stereo | 8Ω |
+| #3 | Bass shakers | Bridged | 4Ω |
+| #4 | **Spare** | Any | Any |
+
+**Advantage:** Single spare covers entire bass infrastructure. Just change mode switch and swap.
+
+### Trade-offs Accepted
+- Single point of failure for tactile (all 16 shakers vs 2 seats)
+- Acceptable because acoustic bass (111.8 dB) continues regardless
+- 10-minute recovery time with on-hand spare
+
+### Cost Summary Update
+
+**Bass Shaker System:**
+| Item | Qty | Unit | Total |
+|------|-----|------|-------|
+| Aura Pro AST-2B-4 | 16 | $70 | $1,120 |
+| NX6000D (bridged) | 1 | $519 | $519 |
+| Noctua NF-R8 fans | 2 | $15 | $30 |
+| 14 AWG wire + junction boxes | — | $35 | $35 |
+| **Total** | | | **$1,704** |
+
+**Spare Strategy:**
+| Item | Qty | Cost | Covers |
+|------|-----|------|--------|
+| NX6000D | 1 | $549 | ALL bass |
+
+### Cumulative Savings (Rev 5.3 → Rev 5.7)
+| Change | Savings |
+|--------|---------|
+| PURIFI → NX6000D | $2,984 |
+| Crowson removal | $2,600 |
+| Nearfield → Bass shakers | $2,492 |
+| **Total** | **$8,076** |
+
+### Files Updated:
+- `Tactile_Bass_Shaker_System.md` - v2.0, rack-mounted NX6000D bridged
+- `03_Subwoofer_System.md` - DSP routing updated
+- `11_Budget_Summary.md` - New costs, unified spare strategy
+- `00_Master_Index.md` - v2.2, Rev 5.7
+- `journal.txt` - This entry
+
+### Key Insight
+For "low fidelity punch" application, unified platform makes sense:
+1. Simpler spare strategy (one amp covers all)
+2. All electronics in rack (no amps under couches)
+3. $731 cost savings
+4. Single cable run (cleaner install)
+
+---
+
+## 2025-12-21: ULF Derating Analysis & Upgrade Path
+
+### Issue Identified
+Original SPL calculations did not account for NX6000D power reduction at ultra-low frequencies (common in Class D amplifiers).
+
+### NX6000D ULF Power Derating @ 8Ω
+
+| Frequency | Amp Power | % of 40Hz |
+|-----------|-----------|----------|
+| 40 Hz+ | ~850W | 100% |
+| 30 Hz | ~850W | 100% |
+| 25 Hz | ~800W | 94% |
+| **20 Hz** | **~750W** | **88%** |
+| 15 Hz | ~600W | 71% |
+| 10 Hz | ~450W | 53% |
+
+### Corrected SPL @ MLP
+
+| Frequency | Original SPL | Corrected SPL | Difference |
+|-----------|--------------|---------------|------------|
+| 20 Hz | 111.8 dB | **111.3 dB** | -0.5 dB |
+| 15 Hz | 106.5 dB | **104.5 dB** | -2.0 dB |
+| 10 Hz | 100 dB | **97 dB** | -3.0 dB |
+
+**Still exceeds THX by +6.3 dB at 20Hz** — adequate for reference-level performance.
+
+### Upgrade Path Research: SpeakerPower Amplifiers
+
+Verified pricing from speakerpower.com (December 2025):
+
+| Model | Power @ 8Ω/ch | Price | Notes |
+|-------|---------------|-------|-------|
+| SP2-8000-HT | 1,500W (sustained) | **$2,999** | 120V, recommended |
+| SP2-12000-HT | 1,800W (sustained) | $3,399 | **Requires 240V** |
+| SP1-6000-HT (plate) | 2,000W mono | $1,749 | Plate amp, no rack |
+
+**Key Advantages of SpeakerPower:**
+- Full sustained power at ALL frequencies (5Hz-500Hz flat)
+- 1Ω stable operation
+- Temperature-activated fans (virtually silent in normal use)
+- Built-in sub DSP per channel
+- Made in USA, excellent reputation
+
+### Upgrade Cost Analysis
+
+| Config | Amps | Cost | 20Hz SPL |
+|--------|------|------|----------|
+| **Current (NX6000D)** | 2× NX6000D | $1,038 | ~111.3 dB |
+| **Upgrade (SP2-8000)** | 2× SP2-8000-HT | $5,998 | ~114.3 dB |
+| Delta | | **+$4,960** | **+3 dB** |
+
+**Full system upgrade (including spare):** +$7,320
+
+### Recommendation
+
+**Start with NX6000D.** The system delivers +6.3 dB over THX at 20Hz — more than adequate for reference-level movie watching.
+
+Upgrade to SpeakerPower SP2-8000-HT only if:
+1. Real-world testing reveals audible ULF deficiency
+2. Specific demanding content (10-15Hz heavy bass) is unsatisfying
+3. Budget allows ~$5K upgrade
+
+The current design is **upgrade-ready** — swap amps, keep everything else.
+
+### Files Updated:
+- `03_Subwoofer_System.md` - v2.3, ULF derating + upgrade path
+- `journal.txt` - This entry
+
+---
+
+## 2025-12-21: Rev 5.8 - "Weapons-Grade Bass" Configuration
+
+### Session Summary
+User selected the maximum configuration: 16× UMII18-22 drivers for ultimate low-frequency performance. This is now the plan of record.
+
+### Configuration Finalized
+
+**Total 18" Drivers: 16**
+
+| Subsystem | Drivers | Enclosures | Location |
+|-----------|---------|------------|----------|
+| Main array | 8× UMII18-22 | 4× dual-driver | 4 corners, floor-loaded |
+| Front nearfield | 4× UMII18-22 | 2× dual-driver | Riser face, 15" from row 1 |
+| Rear nearfield | 4× UMII18-22 | 2× dual-driver | Console table, 15" from row 2 |
+
+**Plus:** 16× Aura Pro bass shakers (retained from Rev 5.7)
+
+### Amplification: 6× NX6000D
+
+| Unit | System | Config |
+|------|--------|--------|
+| #1 | Main subs FL/FR | Stereo @ 8Ω |
+| #2 | Main subs RL/RR | Stereo @ 8Ω |
+| #3 | Front nearfield | Stereo @ 8Ω |
+| #4 | Rear nearfield | Stereo @ 8Ω |
+| #5 | Bass shakers | Bridged @ 4Ω |
+| #6 | Spare | Any mode |
+
+### Performance Metrics
+
+| Metric | Value |
+|--------|-------|
+| Total cone area | 20.4 sq ft (18,944 cm²) |
+| Total displacement/stroke | 3.24 cu ft (53,040 cm³) |
+| Main subs @ 20Hz @ MLP | ~111 dB (+6 dB over THX) |
+| Nearfield @ 15Hz @ 15" | ~120+ dB (chest compression) |
+| Combined peak | ~130 dB |
+| Equivalent to | 25× SVS SB-16 Ultra |
+
+### Cost Summary
+
+| Category | Cost |
+|----------|------|
+| 16× UMII18-22 drivers | $5,600 |
+| 8 enclosures (materials) | $1,450 |
+| 6× NX6000D + fans | $3,294 |
+| 16× Aura Pro shakers | $1,120 |
+| Wiring/misc | $335 |
+| **LF System Total** | **$11,799** |
+
+### Budget Impact
+
+| Rev 5.7 | Rev 5.8 | Delta |
+|---------|---------|-------|
+| ~$68,000 | ~$75,000 | +$7,000 |
+
+The extra cost buys:
+- +20 dB nearfield SPL at chest level
+- Chest compression effect at 15Hz
+- "Reference +15 dB everywhere" capability
+- AVS Forum bragging rights
+
+### Files Updated
+
+- `03_Subwoofer_System.md` - v3.0, complete 16× config
+- `04_Seating_and_Riser.md` - v3.0, nearfield integration
+- `11_Budget_Summary.md` - v3.0, new costs
+- `00_Master_Index.md` - v3.0, Rev 5.8
+- `journal.txt` - this entry
+
+### Decision Rationale
+
+User's response to the question "16× UMII18 — mildly insane?" was:
+
+> "flex OBVIOUSLY"
+
+This is now the plan of record.
+
+### AVS Forum Signature Block
+
+```
+LF SYSTEM:
+├── Mains: 8× Dayton UMII18-22 (corner-loaded, sealed)
+├── Nearfield: 8× Dayton UMII18-22 (riser + console)
+├── Tactile: 16× Aura Pro Bass Shakers
+├── Amplification: 6× Behringer NX6000D (17,000W)
+├── DSP: Dayton DSP-408
+└── Total Displacement: 53,040 cm³ / 3.24 cu ft per stroke
+
+"Yes, all 16 are 18-inch."
+```
+
+---
+
+## 2025-12-22: Nearfield Enclosure Optimization
+
+### Session Summary
+
+Analyzed nearfield enclosure sizing and identified significant free performance gains by using larger enclosures with heavy polyfill stuffing.
+
+### Key Insight: Bigger Boxes = Lower Fc = Less EQ = More Headroom
+
+For sealed enclosures, larger volume lowers Fc and reduces the EQ boost required to hit 15 Hz target. Heavy polyfill stuffing adds ~35-40% virtual volume.
+
+### Front Nearfield (Riser-Mounted)
+
+**Old Plan:** 8 cu ft enclosures
+**New Plan:** 16 cu ft physical + heavy polyfill = ~22 cu ft virtual
+
+The riser is 8 feet deep — enclosures only use 34" of 96" available.
+
+| Metric | Old (8 cu ft) | New (16 cu ft stuffed) |
+|--------|---------------|------------------------|
+| Fc | 39 Hz | **30 Hz** |
+| Qtc | 0.95 | **0.71** (optimal) |
+| EQ @ 15 Hz | +16.5 dB | **+11 dB** |
+| Headroom @ 15 Hz | Baseline | **+5 dB** |
+
+### Rear Nearfield (Console Tower)
+
+**Old Plan:** Console table ON platform (14 cu ft, 36" tall)
+**New Plan:** Floor-standing tower TO floor (25 cu ft physical + polyfill = ~34 cu ft virtual)
+
+Extending to floor adds 24" of free height.
+
+| Metric | Old (on platform) | New (to floor, stuffed) |
+|--------|-------------------|-------------------------|
+| Fc | 31 Hz | **27 Hz** |
+| Qtc | 0.74 | **0.65** |
+| EQ @ 15 Hz | +13 dB | **+9 dB** |
+| Headroom @ 15 Hz | +4 dB | **+7 dB** |
+
+### Cost Delta
+
+| Item | Old | New | Delta |
+|------|-----|-----|-------|
+| Front nearfield (materials) | $400 | $450 | +$50 |
+| Rear nearfield (materials) | $350 | $550 | +$200 |
+| **Total** | $750 | $1,000 | **+$250** |
+
+**Cost per dB gained:** ~$40/dB — extremely cheap.
+
+### Xmax Assessment
+
+Confirmed 28mm Xmax is NOT a limiting factor for larger enclosures:
+- Larger box = lower excursion demand at 15 Hz
+- Driver works more efficiently, reaches closer to displacement-limited max
+- 16 cu ft stuffed (Qtc 0.71) is near-optimal for UMII18-22
+- 25 cu ft stuffed (Qtc 0.65) is slightly overdamped but excellent extension
+
+### Updated Budget
+
+LF System total: $11,799 → **$12,049** (+$250)
+
+### Files Updated
+
+- `03_Subwoofer_System.md` - Nearfield enclosure specs, Fc/Qtc values
+- `04_Seating_and_Riser.md` - Front and rear nearfield construction details
+- `11_Budget_Summary.md` - Updated costs
+- `journal.txt` - This entry
+
+### Next: Corner-Loaded Main Subs
+
+Apply same analysis to the 4× corner-loaded main subs (currently spec'd at 8-12 cu ft).
+
+---
+
+## 2025-12-22: Triangular Corner Column Subwoofers (Rev 5.9)
+
+### Design Evolution
+
+Evolved the corner-loaded main subwoofers from rectangular 8 cu ft boxes to integrated triangular corner columns. Two 4' cabinets per corner (split-build, joined-install) create floor-to-ceiling architectural elements that double as acoustic treatment.
+
+### Critical Insight: Maintain Corner Loading
+
+Initial triangular design placed drivers at 24"/72" heights, which reduced corner loading by 3-4 dB. Solution: Mount BOTH drivers in the BOTTOM cabinet at 11"/32" (identical to old rectangular design), with TOP cabinet providing volume extension only. This maintains full +10-12 dB corner loading gain.
+
+### Key Design Decisions
+
+1. **Triangular cross-section** — fits corners perfectly, inherently rigid
+2. **24" × 24" × 48" internal per cabinet** — combined yields 10.25 cu ft virtual per driver
+3. **Split-build, joined-install** — easier handling (130-180 lbs vs 310 lb monolith)
+4. **Both drivers in bottom cabinet** — maintains corner loading (11"/32" from floor)
+5. **Battle-ready dual seal** — butyl rope + internal batten + 10 bolts
+6. **2" OC 703 face with driver cutouts** — integrated absorption, hides joint
+7. **AT fabric wrap** — looks like acoustic panels, not subwoofers
+
+### Specifications (Per Corner = 2 Joined Cabinets)
+
+| Parameter | Bottom Cabinet | Top Cabinet |
+|-----------|----------------|-------------|
+| Internal dimensions | 24" × 24" × 48" | 24" × 24" × 48" |
+| Drivers | **2× UMII18-22** | **None** (volume only) |
+| Lower driver height | ~11" from floor | — |
+| Upper driver height | ~32" from floor | — |
+| Weight | ~180 lbs | ~130 lbs |
+
+**Combined (joined):**
+| Parameter | Value |
+|-----------|-------|
+| Total height | 96" |
+| Net volume | ~15.2 cu ft |
+| Virtual (stuffed) | ~20.5 cu ft |
+| Per driver | ~10.25 cu ft |
+| Fc | ~30 Hz |
+| Qtc | ~0.72 (optimal Butterworth) |
+| Corner loading | +10-12 dB (full) |
+
+### Battle-Ready Sealed Joint
+
+These subs will be abused. Dual-seal construction:
+
+| Component | Purpose |
+|-----------|--------|
+| Butyl rope tape (3/8") | Primary seal — never cures, self-healing |
+| Internal batten (3/4"×3") | Spans joint, mechanical rigidity, redundant seal |
+| T-nuts + bolts (10×) | Clamping force, ~8" spacing |
+| OC 703 overlay | Hides seam, completes appearance |
+
+### Performance Improvement
+
+| Metric | Old (8 cu ft box) | New (Triangular Split) | Gain |
+|--------|-------------------|------------------------|------|
+| Volume/driver | 4 cu ft | 10.25 cu ft | +156% |
+| Fc | 39 Hz | 30 Hz | -9 Hz |
+| Qtc | 0.95 | 0.72 | Optimal |
+| Corner loading | +11 dB | **+11 dB** | **Maintained** |
+| 20 Hz @ MLP | +3 dB vs THX | **+8 dB vs THX** | **+5 dB** |
+| 15 Hz @ MLP | -3 dB vs THX | **+3 dB vs THX** | **+6 dB** |
+
+### Cost Impact
+
+| Item | Old | New | Delta |
+|------|-----|-----|-------|
+| Main enclosures (8 cabs + sealing) | $700 | $978 | +$278 |
+| Front nearfield | $400 | $450 | +$50 |
+| Rear nearfield | $350 | $550 | +$200 |
+| **LF System Total** | **$11,799** | **$12,327** | **+$528** |
+
+**Value:** +$528 for +5-6 dB output, optimal alignment, full corner loading, ~88 sq ft integrated treatment, battle-ready seals
+
+### Files Updated
+
+- `03_Subwoofer_System.md` — Complete main sub section with split-build design and sealing details
+- `04_Seating_and_Riser.md` — Rear corner integration showing driver positions
+- `11_Budget_Summary.md` — Updated costs including sealing hardware
+- `journal.txt` — This entry
+
+### System Summary (Rev 5.9 Final)
+
+```
+MAIN SUBS: 8× triangular cabinets (split-build, joined-install)
+├── 2 per corner × 4 corners = 8 cabinets (4 bottom + 4 top)
+├── Front corners: Both drivers in bottom cab (11"/32" AFF)
+├── Rear corners: Drivers split, platform-penetrating (27"/51" AFF)
+├── ~10.25 cu ft virtual per driver (optimal Qtc 0.72)
+├── Dual-seal joint: butyl + batten + 10 bolts
+├── 2" OC 703 + AT fabric facing = ~88 sq ft treatment
+└── 113 dB @ 20 Hz @ MLP (+8 dB over THX)
+
+NEARFIELD: 8× UMII18-22 (4 front riser + 4 rear console)
+├── Front: 16 cu ft stuffed, Fc 30 Hz, Qtc 0.71
+├── Rear: 25 cu ft stuffed, Fc 27 Hz, Qtc 0.65  
+└── 120+ dB @ 15 Hz @ 15" (chest compression)
+
+TACTILE: 16× Aura Pro bass shakers
+
+TOTAL: 16× 18" drivers, 12 enclosures, ~$12,327
+
+"They disappear into the corners. And they're built to take a beating."
+```
+
+---
+
+## 2025-12-22: Platform-Penetrating Rear Corner Design (Rev 5.9 Refinement)
+
+### The Problem
+
+Original split-build design placed both drivers in the bottom cabinet at 11"/32" from floor. For rear corners behind the 24" platform, this creates issues:
+- Lower driver at 11" would be enclosed under platform
+- No air path for displacement
+- Corner loading compromised
+
+### The Elegant Solution
+
+Full-height 96" columns PENETRATE through the platform. Platform has triangular cutouts for sub columns. Platform acts as acoustic boundary for corner loading.
+
+**Key Insight:** At 20 Hz, a solid platform (2×10 joists + 3/4" plywood) is acoustically massive and acts as a reflective boundary — the driver doesn't "know" there's air underneath.
+
+### Configuration Comparison
+
+| Parameter | Front Corners | Rear Corners |
+|-----------|---------------|---------------|
+| Column height | 96" | 96" |
+| Bottom cabinet | Both drivers (11"/32") | Single driver at TOP (27") |
+| Top cabinet | Volume only | Single driver at BOTTOM (51") |
+| Corner boundary | Floor (0") | Platform (24") |
+| Volume per driver | 10.25 cu ft | 10.25 cu ft |
+| Fc / Qtc | 30 Hz / 0.72 | 30 Hz / 0.72 |
+| Corner loading | +10-12 dB | +10-12 dB |
+
+### Why This Works
+
+1. **Full volume preserved** — 96" column = same 10.25 cu ft per driver
+2. **Platform as boundary** — Solid construction acts as acoustic floor at 20 Hz
+3. **Corner loading maintained** — Lower driver 3" above platform = excellent coupling
+4. **Solid platform** — No gaps needed, just triangular cutouts for penetration
+5. **Modal distribution bonus** — Different front/rear driver heights may improve uniformity
+
+### Platform Requirements
+
+| Component | Specification |
+|-----------|---------------|
+| Cutout size | ~28" × 28" right triangle (per corner) |
+| Joists | 2×10 @ 16" OC minimum |
+| Deck | 3/4" plywood (double layer at corners) |
+| Corner blocking | Double joists around cutouts |
+| Point load | 400+ lbs per corner |
+
+### Files Updated
+
+- `03_Subwoofer_System.md` — Front/rear corner configurations, driver positions
+- `04_Seating_and_Riser.md` — Platform penetration details, structural requirements
+- `journal.txt` — This entry
+
+### Final Driver Positions
+
+| Corner | Lower | Upper | Boundary | Above Boundary |
+|--------|-------|-------|----------|----------------|
+| FL | 11" | 32" | Floor | 11" / 32" |
+| FR | 11" | 32" | Floor | 11" / 32" |
+| RL | 27" | 51" | Platform | 3" / 27" |
+| RR | 27" | 51" | Platform | 3" / 27" |
+
+**All corners achieve full +10-12 dB corner loading gain.**

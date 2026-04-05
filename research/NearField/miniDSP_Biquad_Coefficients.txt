@@ -1,0 +1,69 @@
+miniDSP 2x4 HD - V3 Nearfield Subwoofer Biquad Coefficients
+Sample Rate: 96 kHz
+Apply to: Output 1 AND Output 2
+
+IMPORTANT: miniDSP 2x4 HD requires NEGATIVE a2 coefficient!
+
+Cabinet Parameters (V3 Design):
+  Fc = 38.0 Hz
+  Qtc = 0.88
+  Volume per driver = 40.3 L
+
+Target: Fp = 10 Hz, Qp = 0.707 (Butterworth)
+Boost @ 10 Hz: +19.5 dB
+
+================================================================================
+OUTPUT 1 & OUTPUT 2 - miniDSP 2x4 HD FORMAT (negative a2)
+================================================================================
+
+biquad1,
+b0=1.0009512511,
+b1=-1.9990713825,
+b2=0.9981263141,
+a1=1.9990742598,
+a2=-0.9990746880
+
+biquad2,
+b0=0.9997685917,
+b1=-1.9995371834,
+b2=0.9997685917,
+a1=1.9995371298,
+a2=-0.9995372369
+
+biquad3,
+b0=0.9997685917,
+b1=-1.9995371834,
+b2=0.9997685917,
+a1=1.9995371298,
+a2=-0.9995372369
+
+================================================================================
+EXPECTED DSP RESPONSE
+================================================================================
+
+  Freq    Response
+  ----    --------
+    5 Hz   +16.9 dB
+   10 Hz   +19.5 dB
+   20 Hz   +10.3 dB
+   38 Hz    +1.1 dB
+   50 Hz    -0.3 dB
+   80 Hz    -0.5 dB
+  100 Hz    -0.4 dB
+
+================================================================================
+NOTES
+================================================================================
+
+miniDSP 2x4 HD Sign Convention:
+  - a1: POSITIVE (opposite of standard DSP convention)
+  - a2: NEGATIVE (opposite of standard DSP convention)
+
+Standard DSP biquad form: H(z) = (b0 + b1*z^-1 + b2*z^-2) / (1 + a1*z^-1 + a2*z^-2)
+miniDSP 2x4 HD form:      H(z) = (b0 + b1*z^-1 + b2*z^-2) / (1 - a1*z^-1 - a2*z^-2)
+
+================================================================================
+CHANGE LOG
+================================================================================
+v3.0 - V3 cabinet (Fc=38Hz, Qtc=0.88)
+v3.1 - Corrected for miniDSP 2x4 HD sign convention (negative a2)

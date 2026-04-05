@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual-Opposed Sub - Complete Assembled Views</title>
+    <style>
+        body {
+            background: #1a1a2e;
+            color: #eee;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #fff; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .diagram {
+            background: #252540;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1 1 400px;
+            max-width: 550px;
+        }
+        .diagram h2 {
+            color: #7eb8da;
+            margin: 0 0 15px 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+        svg { display: block; margin: 0 auto; }
+        
+        .mdf { fill: #c4a574; stroke: #8b7355; stroke-width: 1.5; }
+        .mdf-dark { fill: #a08050; stroke: #8b7355; stroke-width: 1.5; }
+        .leg { fill: #8b6914; stroke: #5a4510; stroke-width: 1.5; }
+        .driver { fill: #2d2d4a; stroke: #f0a050; stroke-width: 2; }
+        .driver-cone { fill: none; stroke: #f0a050; stroke-width: 1.5; }
+        .rubber { fill: #2a2a2a; stroke: #444; stroke-width: 1; }
+        .floor { fill: #3d3d3d; stroke: #666; stroke-width: 1; }
+        .grille { fill: rgba(100,100,100,0.4); stroke: #888; stroke-width: 1; }
+        .air-gap { fill: rgba(100, 200, 255, 0.1); }
+        .wall { fill: #4a4a4a; stroke: #666; stroke-width: 1; }
+        
+        .dim-line { stroke: #f0a050; stroke-width: 1; }
+        .dim-text { font-size: 11px; fill: #f0a050; font-weight: bold; }
+        .label { font-size: 10px; fill: #ccc; }
+        .label-small { font-size: 9px; fill: #999; }
+        .annotation { font-size: 9px; fill: #7eb8da; }
+        .callout { font-size: 10px; fill: #8c8; }
+        
+        .force-arrow { stroke: #ff6b6b; stroke-width: 3; fill: none; marker-end: url(#forceArrow); }
+        .airflow { stroke: #64c8ff; stroke-width: 2; fill: none; marker-end: url(#airArrow); }
+        
+        .specs-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .specs-box h3 {
+            color: #7eb8da;
+            margin: 0 0 10px 0;
+            font-size: 0.95rem;
+        }
+        .specs-box table {
+            width: 100%;
+            font-size: 0.85rem;
+        }
+        .specs-box td {
+            padding: 4px 0;
+        }
+        .specs-box .value {
+            text-align: right;
+            color: #f0a050;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Complete Assembled Views</h1>
+    <p class="subtitle">Dual-Opposed Vertical Subwoofer — Final Configuration</p>
+    
+    <div class="container">
+        
+        <!-- Front/Side view -->
+        <div class="diagram">
+            <h2>Front View — Assembled</h2>
+            <svg width="400" height="480" viewBox="0 0 400 480">
+                <defs>
+                    <marker id="forceArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+                    </marker>
+                    <marker id="airArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="#64c8ff"/>
+                    </marker>
+                </defs>
+                
+                <!-- Floor -->
+                <rect x="30" y="420" width="340" height="40" class="floor"/>
+                <text x="200" y="445" text-anchor="middle" class="label">FLOOR</text>
+                
+                <!-- Air gap -->
+                <rect x="100" y="370" width="200" height="50" class="air-gap"/>
+                
+                <!-- Legs (front two visible) -->
+                <rect x="100" y="370" width="30" height="50" class="leg" rx="2"/>
+                <rect x="270" y="370" width="30" height="50" class="leg" rx="2"/>
+                <rect x="100" y="415" width="30" height="5" class="rubber"/>
+                <rect x="270" y="415" width="30" height="5" class="rubber"/>
+                
+                <!-- Cabinet body -->
+                <rect x="90" y="85" width="220" height="285" class="mdf" rx="3"/>
+                
+                <!-- Top panel with driver -->
+                <rect x="90" y="70" width="220" height="15" class="mdf"/>
+                
+                <!-- Top driver (visible from front) -->
+                <ellipse cx="200" cy="70" rx="70" ry="18" class="driver"/>
+                <ellipse cx="200" cy="70" rx="52" ry="13" class="driver-cone"/>
+                <ellipse cx="200" cy="70" rx="28" ry="7" class="driver-cone"/>
+                
+                <!-- Grille -->
+                <ellipse cx="200" cy="55" rx="75" ry="20" class="grille"/>
+                
+                <!-- Force arrows -->
+                <path d="M 200 40 L 200 10" class="force-arrow"/>
+                <text x="220" y="20" class="label" style="fill: #ff6b6b; font-weight: bold;">F ↑</text>
+                
+                <!-- Airflow -->
+                <path d="M 160 390 L 160 405 L 60 405" class="airflow"/>
+                <path d="M 240 390 L 240 405 L 340 405" class="airflow"/>
+                
+                <!-- Dimensions -->
+                <line x1="60" y1="70" x2="60" y2="370" class="dim-line"/>
+                <line x1="55" y1="70" x2="65" y2="70" class="dim-line"/>
+                <line x1="55" y1="370" x2="65" y2="370" class="dim-line"/>
+                <text x="45" y="220" text-anchor="middle" class="dim-text" transform="rotate(-90, 45, 220)">29.5"</text>
+                
+                <line x1="90" y1="460" x2="310" y2="460" class="dim-line"/>
+                <line x1="90" y1="455" x2="90" y2="465" class="dim-line"/>
+                <line x1="310" y1="455" x2="310" y2="465" class="dim-line"/>
+                <text x="200" y="475" text-anchor="middle" class="dim-text">29.5"</text>
+                
+                <line x1="340" y1="370" x2="340" y2="420" class="dim-line"/>
+                <line x1="335" y1="370" x2="345" y2="370" class="dim-line"/>
+                <line x1="335" y1="420" x2="345" y2="420" class="dim-line"/>
+                <text x="360" y="400" class="dim-text">4"</text>
+                
+                <!-- Labels -->
+                <text x="55" y="405" class="annotation">Air ←</text>
+                <text x="345" y="405" class="annotation">→ Air</text>
+                <text x="200" y="200" text-anchor="middle" class="label">CABINET</text>
+                <text x="200" y="220" text-anchor="middle" class="label-small">~264 lbs</text>
+            </svg>
+        </div>
+        
+        <!-- Top view -->
+        <div class="diagram">
+            <h2>Top View — Driver & Grille</h2>
+            <svg width="350" height="380" viewBox="0 0 350 380">
+                <!-- Cabinet top -->
+                <rect x="50" y="50" width="250" height="250" class="mdf" rx="3"/>
+                
+                <!-- Driver -->
+                <circle cx="175" cy="175" r="80" class="driver"/>
+                <circle cx="175" cy="175" r="60" class="driver-cone"/>
+                <circle cx="175" cy="175" r="35" class="driver-cone"/>
+                <circle cx="175" cy="175" r="12" fill="#f0a050" opacity="0.5"/>
+                
+                <!-- Grille outline -->
+                <circle cx="175" cy="175" r="88" class="grille"/>
+                
+                <!-- Corner legs (visible through/below) -->
+                <rect x="55" y="55" width="30" height="30" fill="none" stroke="#5a4510" stroke-width="2" stroke-dasharray="4,2" rx="2"/>
+                <rect x="265" y="55" width="30" height="30" fill="none" stroke="#5a4510" stroke-width="2" stroke-dasharray="4,2" rx="2"/>
+                <rect x="55" y="265" width="30" height="30" fill="none" stroke="#5a4510" stroke-width="2" stroke-dasharray="4,2" rx="2"/>
+                <rect x="265" y="265" width="30" height="30" fill="none" stroke="#5a4510" stroke-width="2" stroke-dasharray="4,2" rx="2"/>
+                
+                <!-- Dimension -->
+                <line x1="50" y1="320" x2="300" y2="320" class="dim-line"/>
+                <line x1="50" y1="315" x2="50" y2="325" class="dim-line"/>
+                <line x1="300" y1="315" x2="300" y2="325" class="dim-line"/>
+                <text x="175" y="340" text-anchor="middle" class="dim-text">29.5"</text>
+                
+                <!-- Labels -->
+                <text x="175" y="175" text-anchor="middle" class="label" style="fill: #f0a050;">18"</text>
+                <text x="175" y="360" text-anchor="middle" class="annotation">Dashed squares = leg positions below</text>
+            </svg>
+        </div>
+        
+        <!-- Corner placement view -->
+        <div class="diagram">
+            <h2>Corner Placement — +12 dB Gain</h2>
+            <svg width="380" height="380" viewBox="0 0 380 380">
+                <!-- Walls -->
+                <rect x="280" y="0" width="100" height="380" class="wall"/>
+                <rect x="0" y="0" width="380" height="80" class="wall"/>
+                <text x="330" y="200" text-anchor="middle" class="label" transform="rotate(90, 330, 200)">SIDE WALL</text>
+                <text x="140" y="45" text-anchor="middle" class="label">REAR WALL</text>
+                
+                <!-- Floor indication -->
+                <text x="40" y="350" class="label-small" style="fill: #666;">Floor: +6 dB</text>
+                
+                <!-- Corner gain zone -->
+                <rect x="200" y="80" width="80" height="80" fill="rgba(100,255,150,0.08)" stroke="#8c8" stroke-width="1" stroke-dasharray="5,3"/>
+                
+                <!-- Cabinet -->
+                <rect x="100" y="100" width="160" height="160" class="mdf" rx="3"/>
+                
+                <!-- Top driver -->
+                <circle cx="180" cy="180" r="55" class="driver"/>
+                <circle cx="180" cy="180" r="40" class="driver-cone"/>
+                <circle cx="180" cy="180" r="20" class="driver-cone"/>
+                
+                <!-- Grille -->
+                <circle cx="180" cy="180" r="60" class="grille"/>
+                
+                <!-- Legs (visible as corners) -->
+                <rect x="105" y="105" width="25" height="25" class="leg" rx="2"/>
+                <rect x="230" y="105" width="25" height="25" class="leg" rx="2"/>
+                <rect x="105" y="230" width="25" height="25" class="leg" rx="2"/>
+                <rect x="230" y="230" width="25" height="25" class="leg" rx="2"/>
+                
+                <!-- Boundary gain labels -->
+                <text x="320" y="180" class="callout">+3 dB</text>
+                <text x="180" y="95" text-anchor="middle" class="callout">+3 dB</text>
+                
+                <!-- Total gain -->
+                <text x="70" y="300" class="callout" style="font-weight: bold;">TOTAL:</text>
+                <text x="70" y="320" class="callout" style="font-weight: bold;">+12 dB @ 20Hz</text>
+                
+                <!-- Gap to walls -->
+                <line x1="260" y1="180" x2="280" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="275" y="195" class="label-small">≤2"</text>
+            </svg>
+        </div>
+        
+        <!-- Force cancellation diagram -->
+        <div class="diagram">
+            <h2>Force Cancellation Principle</h2>
+            <svg width="380" height="380" viewBox="0 0 380 380">
+                <!-- Cabinet outline -->
+                <rect x="90" y="50" width="200" height="260" class="mdf" rx="3"/>
+                
+                <!-- Top driver -->
+                <ellipse cx="190" cy="65" rx="60" ry="15" class="driver"/>
+                <ellipse cx="190" cy="65" rx="40" ry="10" class="driver-cone"/>
+                <!-- Motor -->
+                <rect x="155" y="80" width="70" height="40" fill="#3a3a5a" stroke="#f0a050" stroke-width="1.5" rx="2"/>
+                
+                <!-- Bottom driver -->
+                <ellipse cx="190" cy="295" rx="60" ry="15" class="driver"/>
+                <ellipse cx="190" cy="295" rx="40" ry="10" class="driver-cone"/>
+                <!-- Motor -->
+                <rect x="155" y="240" width="70" height="40" fill="#3a3a5a" stroke="#f0a050" stroke-width="1.5" rx="2"/>
+                
+                <!-- Internal chamber label -->
+                <text x="190" y="180" text-anchor="middle" class="label">Shared</text>
+                <text x="190" y="195" text-anchor="middle" class="label">Chamber</text>
+                
+                <!-- Force arrows -->
+                <path d="M 190 50 L 190 15" class="force-arrow"/>
+                <path d="M 190 310 L 190 345" class="force-arrow"/>
+                
+                <!-- Force labels -->
+                <text x="210" y="25" class="label" style="fill: #ff6b6b; font-weight: bold;">F ↑</text>
+                <text x="210" y="340" class="label" style="fill: #ff6b6b; font-weight: bold;">F ↓</text>
+                
+                <!-- Cancellation indicator -->
+                <text x="310" y="180" text-anchor="start" class="callout">Forces are</text>
+                <text x="310" y="198" text-anchor="start" class="callout">equal and</text>
+                <text x="310" y="216" text-anchor="start" class="callout">opposite</text>
+                
+                <!-- Result -->
+                <text x="190" y="365" text-anchor="middle" class="annotation" style="font-size: 11px;">Cabinet stays planted — no vibration or "walking"</text>
+            </svg>
+        </div>
+        
+    </div>
+    
+    <!-- Specifications summary -->
+    <div style="max-width: 600px; margin: 30px auto;">
+        <div class="specs-box">
+            <h3>Final Specifications Summary</h3>
+            <table>
+                <tr><td>External dimensions</td><td class="value">29.5" × 29.5" × 29.5"</td></tr>
+                <tr><td>Total height (with legs)</td><td class="value">33.5"</td></tr>
+                <tr><td>Internal volume</td><td class="value">12.7 cu ft gross</td></tr>
+                <tr><td>Net volume per driver</td><td class="value">~6.1 cu ft</td></tr>
+                <tr><td>Drivers</td><td class="value">2× Dayton UMII18-22</td></tr>
+                <tr><td>Configuration</td><td class="value">Vertical opposed (up/down)</td></tr>
+                <tr><td>Total weight</td><td class="value">~264 lbs</td></tr>
+                <tr><td>Corner loading gain</td><td class="value">+12 dB @ 20Hz</td></tr>
+                <tr><td>SPL capability</td><td class="value">109 dB @ 20Hz at MLP</td></tr>
+                <tr><td>Qtc</td><td class="value">0.83</td></tr>
+                <tr><td>F3 (in-room)</td><td class="value">~22 Hz</td></tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

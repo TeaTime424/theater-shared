@@ -1,0 +1,354 @@
+# Quick Reference & Change History
+## Home Theater System - Rev 5.2 Extract
+
+**Document Purpose:** System specifications summary and revision history.
+
+**Source:** Extracted from Home_Theater_System_Complete_Design_Rev5_2.md
+
+---
+
+## Quick Reference Specifications
+
+### System at a Glance
+
+**Configuration:** 9.4.6 Dolby Atmos
+- 3’ LCR (DIYSG Titan-815LX) - on stage deck
+- 4’ Surrounds (DIYSG HT-12)
+- 6ƒ” Atmos (DIYSG Volt-10)
+- 4’ Subwoofers (Dual UM18-22 sealed)
+ - 2 front (horizontal, floor-level, corner pockets under stage)
+ - 2 rear (vertical, floor-level, corner placement behind riser)
+- 6’ Crowson transducers
+- Equipment rack: 42U, on stage deck beside LCR
+
+**Subwoofer System:**
+- 8’ Dayton UMII18-22 (2 per enclosure ’ 4 enclosures)
+- Verified specs: Xmax 28mm, 1,200W RMS, Qts 0.53, Fs 22Hz, Vas 8.77 ft’³³
+- Front: 51"W × 27"H × 24"D horizontal with 3" recessed drivers & integrated AT covers
+- Rear: 30"W × 48"H × 22"D vertical with 3" recessed drivers & integrated AT covers
+- Amplification: 4’ PURIFI 1ET9040BA monoblocks (1,200W @ 2Ω per sub)
+- Power per driver: 600W (93% of mechanical limit, WinISD verified)
+- Three-wall corner loading (all four subs)
+- **Reference level: 109 dB @ 20Hz at MLP** (+4 dB above THX Reference)
+- **Peak capability: 113+ dB @ 20Hz** (dynamic headroom for film transients)
+- **Amplifier headroom: 38% utilization at reference level** (62% reserve)
+- High-pass filter: 18-20Hz (driver protection, subsonic elimination)
+- Silent operation: Fanless PURIFI amplification
+
+**Front Stage:**
+- 16' ’ 30' ’ 27" (to deck)
+- Three zones: Left sub pocket, center solid section, right sub pocket
+- Equipment rack and LCR on center solid section deck
+- Front subs on floor in corner pockets (below deck)
+
+**Room:**
+- 16' ’ 26' ’ 10'
+- Fully treated
+- 170" 2.35:1 AT screen
+- Zero ambient lighting (work lights for setup)
+
+**Seating:**
+- Row 1: 13' from screen, ground level
+- Row 2: 18' from screen, 24" riser
+- 11' couches (freestanding)
+
+**Control:**
+- Marantz AV10 processor
+- Dirac Live + Bass Control + ART
+- miniDSP Flex HT (sub management)
+- Buckeye Class D amplification throughout
+- All equipment in stage-mounted rack
+
+**Timeline:** Construction 2027
+
+---
+
+---
+
+## Summary of Key Design Changes
+
+### Revision 5.0 Updates (Current - v5.0)
+
+**Atmos Speaker Upgrade: DIYSG Volt-10**
+
+**Previous design (Rev 4.2):**
+- DIY Eminence-based build (Beta-8CX woofer, PSD:2002S-8 compression driver)
+- 8" woofer, 0.6 cubic foot cabinet
+- Estimated sensitivity: 95-97 dB
+- Performance at MLP: 104-105 dB (marginal for THX Reference 105 dB requirement)
+- Cost: ~$200 per speaker, $1,220 total for 6
+
+**Current design (Revision 5.0):**
+- DIYSG Volt-10 (optimized for home theater reference systems)
+- 10" woofer, verified 98 dB sensitivity
+- Performance at MLP: 107-108 dB (exceeds THX Reference by +2-3 dB)
+- Cost: ~$350-400 per speaker, $2,100-2,400 total for 6
+
+**Benefits of Revision 5.0 Changes:**
+
+**Performance:**
+- **Guaranteed reference capability:** 107-108 dB at both seating rows vs. marginal 104-105 dB
+- **+3 dB headroom:** Comfortable dynamic range for demanding Atmos soundtracks
+- **Verified specifications:** 98 dB sensitivity measured by DIYSG (not estimated)
+- **Better midbass:** 10" woofer provides superior authority for Atmos effects
+
+**System Integration:**
+- **Eliminates weak link:** All channels now reference-capable (LCR, surrounds, subs, Atmos)
+- **Consistent philosophy:** Matches the no-compromise approach of rest of system
+- **Proven design:** DIYSG engineering removes guesswork from DIY approach
+
+**Value:**
+- **Cost increase:** +$880-1,180 total ($146-196 per speaker)
+- **Performance gain:** +3 dB SPL capability, verified specifications
+- **Appropriate scaling:** In context of $68K+ system, ensures no performance compromises
+
+**Rationale:**
+With subwoofers exceeding THX Reference by +8 dB and LCR/surrounds all reference-capable, having marginal Atmos channels would be the system's limiting factor. The Volt-10 ensures consistent reference-level performance across all channels, matching the system's overall philosophy.
+
+**Material costs:** Net increase of +$880-1,180 total system cost
+- Atmos speakers: +$880-1,180 (DIYSG Volt-10 vs. DIY Eminence)
+- Benefit: Guaranteed reference performance, no weak links
+
+---
+
+### Revision 4.1 Updates
+
+**3" Recessed Driver Mounting with Integrated AT Fabric Covers:**
+
+**Previous design (Rev 4.0):**
+- Front subs: 45"W × 21"H × 24"D with flat front baffle
+- Rear subs: 24"W × 42"H × 22"D with flat front baffle 
+- Corner pockets: 45" wide
+- Center section: 102" wide
+- Drivers mounted flush to front baffle
+- Separate AT fabric panels on stage front
+- Clearance above front subs: 6"
+
+**Current design (Revision 4.1):**
+- Front subs: 51"W × 27"H × 24"D with 3" recessed driver mounting
+- Rear subs: 30"W × 48"H × 22"D with 3" recessed driver mounting
+- Corner pockets: 51" wide (accommodates larger width)
+- Center section: 90" wide (adjusted for pocket expansion)
+- Drivers recessed 3" behind perimeter frame
+- Integrated AT fabric covers (51"W × 27"H front, 30"W × 48"H rear)
+- Clearance above front subs: 0" (exact fit - 27" sub in 27" pocket)
+
+**Benefits of Revision 4.1 Changes:**
+
+**Protection & Aesthetics:**
+- Professional driver protection: 3" recessed mounting shields all 8 drivers
+- Integrated covers: Self-contained subwoofer assemblies (enclosure + cover)
+- Commercial-grade appearance: Recessed drivers with AT fabric
+- Prevents accidental cone damage during installation and use
+
+**Construction & Service:**
+- Simpler stage design: Eliminates separate stage front AT panel system
+- Modular assemblies: Build subs complete with covers in workshop
+- Easier service: Remove individual covers vs. removing stage panels
+- Improved access: Direct access to recessed drivers through integrated covers
+
+**Acoustic:**
+- Maintains identical internal volume (~8-9 ft³ per enclosure)
+- Same Qtc alignment (0.91) and performance characteristics
+- No change to SPL capability (109 dB @ 20Hz at MLP)
+- 3" air gap prevents fabric pumping (acoustic transparency maintained)
+
+**Practical:**
+- Exact fit: 27" tall front subs in 27" tall pockets (no wasted space)
+- Professional installation: Subs install as complete units
+- Front/rear subs still use matching volumes (Dirac ART compatibility)
+- Consistent driver protection approach (all four subs identical concept)
+
+**Material costs:** Net increase of +$268 total system cost
+- Front subs: +$145 (larger enclosures, integrated covers)
+- Rear subs: +$330 (larger enclosures, integrated covers) 
+- Stage platform: +$13 (larger corner pockets)
+- Eliminated: -$220 (separate stage front AT panels)
+
+---
+
+### Revision 4.0 Updates
+
+**Subwoofer Dimension Optimization:**
+
+**Previous design (Rev 3):**
+- Front subs: 42"W × 24"H × 24"D horizontal
+- Rear subs: 24"W × 42"H × 24"D vertical
+- Corner pockets: 42" wide
+- Center section: 108" wide
+- Clearance above front subs: 3"
+
+**Previous design (Revision 4.0):**
+- Front subs: 45"W × 21"H × 24"D horizontal (optimized dimensions)
+- Rear subs: 24"W × 42"H × 22"D vertical (matched volume)
+- Corner pockets: 45" wide (accommodates larger width)
+- Center section: 102" wide (adjusted for pocket expansion)
+- Clearance above front subs: 6" (improved serviceability)
+
+**Benefits of Revision 4 Changes:**
+
+**Construction:**
+- Better driver spacing: 4.5" between driver edges vs. 3-4" previously
+- Improved front baffle rigidity (less extreme aspect ratio)
+- More practical height (21" vs. 24" - easier to maneuver during construction)
+- Better top clearance (6" vs. 3" - easier cable routing)
+
+**Acoustic:**
+- Maintains identical internal volume (~8 ft’³³ per enclosure)
+- Same Qtc alignment (0.91) and performance characteristics
+- No change to calculated SPL capability (109 dB @ 20Hz at MLP)
+
+**Practical:**
+- Front/rear subs use matching volumes (important for Dirac ART)
+- Rear subs 2" shallower (22"D vs. 24"D - saves floor space)
+- Still fits all stage constraints (45" < 48" available corner width)
+- Better use of available space
+
+**Material costs:** Minimal change (~$11 additional for slightly larger corner pockets and openings)
+
+---
+
+### Revision 3 Updates
+
+**WinISD Pro Verification:**
+- All Dayton Audio UMII18-22 Thiele-Small parameters confirmed in WinISD Pro software
+- Dual-driver sealed enclosure configuration (4.5 ft³ per driver) modeled and verified
+- Qtc alignment (0.91), F3 response (~38 Hz), and impedance characteristics validated
+- Power handling and excursion behavior at 225W per driver confirmed safe
+- Box resonance frequency (Fc = 37.8 Hz) matches hand calculations
+- Software modeling provides additional confidence in the sealed alignment design
+
+### Revision 2 Updates
+
+### Front Stage Reconfiguration
+
+**Previous design:**
+- Solid stage platform (16' ’ 30')
+- Consideration of equipment bay under stage OR side rack placement
+
+**Previous design (Revision 2, updated in Rev 4.0, now Rev 4.1):**
+- Three-zone stage: Corner sub pockets + center solid section
+- Equipment rack ON stage deck (beside LCR speakers)
+- Front subwoofers on FLOOR in corner pockets (under stage deck)
+- Horizontal sub orientation (45"W × 21"H × 24"D - optimized in Rev 4)
+
+### Equipment Placement
+
+**Previous consideration:**
+- Under-stage equipment bay with slide-out shelves
+- OR side rack beside stage (freestanding)
+
+**Current design (Revision 2):**
+- 42U rack on stage deck (center solid section)
+- Positioned beside left speaker
+- Access through false wall AT fabric panel (removable)
+- Standing access (superior to under-stage)
+
+### Front Subwoofer Integration
+
+**Previous design:**
+- Front subs in room corners, beside stage (freestanding)
+- OR under stage with complex access
+
+**Previous design (Revision 2, dimensions optimized in Rev 4.1):**
+- Front subs integrated into stage structure (floor-level corner pockets)
+- Horizontal orientation fits under 27" deck (21" tall + 6" clearance - Rev 4)
+- No protrusion into room (24" depth within 30" stage)
+- Fire through openings in stage front (covered by AT fabric panels)
+- Full three-wall corner loading maintained
+- Completely hidden installation
+
+### Benefits of Revision 2 Design
+
+**Acoustic:**
+- All four subs achieve three-wall corner loading (+12-15 dB at 20Hz)
+- Symmetric front sub placement (optimal for Dirac ART)
+- No compromise in boundary reinforcement
+
+**Practical:**
+- Simplified stage construction (no complex equipment bay)
+- Superior equipment access (standing vs. floor panels)
+- Protected subwoofer installation (enclosed in structure)
+- Short cable runs (rack to LCR: inches, rack to subs: feet)
+
+**Aesthetic:**
+- Everything hidden (subs under deck, rack behind panel)
+- Clean stage front (AT fabric panels match screen)
+- Professional cinema appearance
+- Consistent design (all subs behind AT fabric)
+
+**Cost:**
+- Similar or lower total cost
+- Simpler construction = less labor
+- No complex slide mechanisms or access panels
+
+---
+
+---
+
+## Conclusion
+
+This theater represents a carefully engineered reference-level system designed to deliver exceptional performance across all aspects: imaging, dynamics, bass extension, and immersion. Every design decision has been analyzed, calculated, and verified to ensure optimal results.
+
+The Revision 5.2 design adds detailed LCR isolation specifications:
+- Sorbothane 50 durometer hemispheres (1.5" diameter × 0.5" thick)
+- 4 pucks per speaker in rectangular pattern (12 total for all LCR)
+- Complete installation methodology and best practices documented
+- Essential for reference-level imaging performance ($72-96 total investment)
+
+The Revision 5.1 design provides critical documentation clarifications:
+- High-pass filter standardized to 18-20Hz throughout (WinISD verified safe)
+- LCR isolation elevated from "optional" to "standard" (essential for reference)
+- Builder DIY capabilities documented (acoustic treatment, electrical work)
+- Rear subwoofer placement clarified (hard against rear wall, floor-level, three-wall loading)
+- Equipment rack spatial layout clarified (beside screen, not competing with LCR space)
+
+The Revision 5.0 design upgrades Atmos speakers to eliminate the system's only performance weak link:
+- DIYSG Volt-10 speakers (98 dB sensitivity verified)
+- 107-108 dB capability at listening positions (exceeds THX Reference by +2-3 dB)
+- Ensures all channels achieve reference capability with comfortable headroom
+- Consistent no-compromise philosophy across entire system
+
+The Revision 4 design refines the subwoofer dimensions for improved construction and serviceability:
+- Front subs: 45"W × 21"H × 24"D (better driver spacing, easier handling)
+- Rear subs: 24"W × 42"H × 22"D (matched volume, space savings)
+- Improved clearances and more practical aspect ratios
+- Maintains all acoustic performance targets (109 dB @ 20Hz at MLP)
+
+The Revision 2 foundation optimizes the front stage configuration by:
+- Integrating front subwoofers into floor-level corner pockets (three-wall loading)
+- Positioning equipment rack on stage deck beside LCR (excellent access)
+- Maintaining clean aesthetics (everything hidden behind AT fabric)
+- Simplifying construction (no complex equipment bay cavities)
+
+The 2027 construction timeline allows for thorough planning while technology matures. The fundamental designƒ×š¬³sealed subwoofers with corner loading, behind-screen LCR, advanced room correction, and tactile enhancementƒ×š¬³is based on proven principles that will remain valid.
+
+Key success factors:
+- Rigorous mathematical design (no guesswork)
+- Quality components from established manufacturers
+- Modular construction approach (manageable complexity)
+- Professional calibration (maximize system potential)
+- Safety margins in all subsystems (longevity and reliability)
+
+The result will be a theater capable of THX reference levels with substantial headroom, true 20Hz extension, exceptional imaging from all seats, and a level of immersion that rivals commercial cinemasƒ×š¬³all in a dedicated, purpose-built environment optimized for the ultimate viewing experience.
+
+**Total investment:** ~$75,250-92,969 (Rev 5.2, with DIY capabilities)
+**Recommended budget:** $80,000-90,000 (includes 10% contingency)
+**Timeline:** 2027 construction
+**Expected lifespan:** 15-20+ years with proper maintenance
+**Performance target:** 109 dB @ 20Hz at MLP (exceeds THX Reference by +4 dB)
+**Peak capability:** 113+ dB @ 20Hz (for dynamic film transients)
+**Atmos capability:** 107-108 dB at MLP (exceeds THX Reference by +2-3 dB)
+**Driver operating point:** 600W per driver (93% of 28mm Xmax mechanical limit, WinISD verified)
+**Amplifier headroom:** PURIFI monoblocks provide power beyond driver mechanical limits (proper engineering)
+**Verified specifications:** All subwoofer calculations based on Dayton Audio official spec sheet and WinISD modeling
+
+This document serves as both a construction guide and a knowledge repository, ensuring that when build time arrives, every decision has already been made with full understanding of the engineering trade-offs and rationale.
+
+---
+
+---
+
+**Document Version:** 1.0 (Extracted from Rev 5.2) 
+**Created:** November 22, 2025 
+**Source:** Home_Theater_System_Complete_Design_Rev5_2.md (Quick Reference & History sections)

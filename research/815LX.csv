@@ -1,0 +1,63 @@
+Name	Width	Depth	Height	Elevation	Visible
+speaker plane	240	240	1	52	false
+Speaker platform	180	29.5	1.1	27	true
+behind Speakers Panels	116.437	6.024	48	28	true
+Box	24	6	48	28	true
+Box	24	6	48	28	true
+Box	24	6	48	28	true
+Box	24	6	48	28	true
+Door	36	9	82.125	0	true
+back lights	199.38	34.65	3.875	86.625	false
+main lights	141.857	91.845	3.875	86.625	true
+Incandescent light source	3.875	3.875	3.875	86.625	true
+Incandescent light source	3.875	3.875	3.875	86.625	true
+Incandescent light source	3.875	3.875	3.875	86.625	true
+Incandescent light source	3.875	3.875	3.875	86.625	true
+bean bags	155.741	70.18	27.125	0	false
+projector	18.5	283	28	94	false
+Front Equipment Panels	192	4.173	30.602	0.5	false
+Equipment Shelves	72	18.724	21	0.5	true
+Equipment access	192	3	25	0	true
+speaker wall hole	144	3	60	27	true
+2.35:1 150" screen only	138.5	1	57.75	29	false
+2.35:1 170" screen only	157	1	66.8	29	false
+83" TV	72	0.125	41	35	false
+uplights	65.717	193.721	10.25	96	false
+Platforms	193.357	78.04	26	0	true
+Big Sofas Config	134.412	114.219	76.125	0	true
+R side hole shelf	156	10	36	36	true
+L side hole shelf	156	10.163	36	36	true
+Side Surround	69.848	212.204	16.137	44	true
+Atmos	233.124	235.448	9	111	true
+Rear Shelves	192.165	10.163	36	72	true
+Rear Surround	142.054	12.317	14	74.75	true
+right wall panels	179.866	8.506	72	24	true
+left wall panels	179.585	8.141	72	24	true
+Cloud	168.66	207.023	6	108	true
+Frame Norway photos	24	8	48	48	true
+Frame Norway photos	24	8	48	48	true
+bass traps	18.199	192.363	120	26	true
+Front Equipment Panels	120	3.101	18	0.5	true
+Rear Stretch	193.306	4	120	0	false
+Frame Norway photos	24	8	48	48	true
+Titan LCR BOXES	134.135	27.246	42.5	28	false
+DIY Dual 18 (R)	24.134	30.054	42	0	false
+DIY Dual 18 (R)	24.134	30.054	42	0	false
+815LX Modeled	140.195	25.596	42.875	30	true
+815LX	22.14	23.531	42.875	30	true
+titan 815LX Base	19.5	21.8	22.5	30	true
+titan_815lx_top	19.25	13.7	20.625	52.25	true
+815LX	19.5	21.8	42.875	30	true
+titan 815LX Base	19.5	21.8	22.5	30	true
+titan_815lx_top	19.25	13.7	20.625	52.25	true
+815LX	22.14	23.531	42.875	30	true
+titan 815LX Base	19.5	21.8	22.5	30	true
+titan_815lx_top	19.25	13.7	20.625	52.25	true
+DIY Dual 18 (8cf) (R)	23.5	18.5	44	0	true
+DIY Dual 18 (8cf) (F)	44	18.5	23.5	0	true
+cabinet_model	23.5	18.5	44	0	true
+UMII18-22	18.5	18.501	10.174	2.125	true
+UMII18-22	18.5	18.5	10.125	2.125	true
+DIY Dual 18 (8cf) (R)	23.5	18.5	44	0	true
+DIY Dual 18 (8cf) (F)	44	18.5	23.5	0	true
+startech_4postrack25u	25.1	29.95	50.7	30	true

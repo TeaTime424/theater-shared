@@ -1,0 +1,31 @@
+PNG DIAGRAM FILES
+
+The following PNG diagram files have been generated and are available for download:
+
+1. 01_sheet1_cutting_layout.png - MDF Sheet 1 cutting layout
+2. 02_sheet2_cutting_layout.png - MDF Sheet 2 cutting layout  
+3. 03_cross_section.png - Side cross section showing braces and drivers
+4. 04_bottom_view_legs.png - Bottom view showing leg positions
+5. 05_window_brace_detail.png - Window brace dimensions
+6. 06_exploded_assembly.png - Exploded assembly view
+
+Download these from the Claude outputs folder.
+
+VERIFIED MEASUREMENTS:
+
+Sheet 1 contains:
+- TOP panel: 29.5" × 29.5" with 16.875" center cutout
+- BOTTOM panel: 29.5" × 29.5" with 16.875" center cutout
+- SIDE 1: 28" × 28"
+- BRACE 1: 28" × 4" (with 12" window)
+- BRACE 2: 28" × 4" (with 12" window)
+
+Sheet 2 contains:
+- SIDE 2: 28" × 28"
+- SIDE 3: 28" × 28"
+- SIDE 4: 28" × 28"
+
+Window brace: 28" total length, 8" solid on each end, 12" center window
+
+All side panels are 28" × 28" (not 29.5") because they fit BETWEEN the top
+and bottom panels: 29.5" - 0.75" - 0.75" = 28"

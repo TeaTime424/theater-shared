@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">NX6000D Per-Amp Internal Relay Modification</text>
+  
+  <!-- ===== AMP CHASSIS OUTLINE ===== -->
+  <rect x="50" y="60" width="800" height="350" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">NX6000D INTERNAL VIEW (Top Cover Removed)</text>
+  
+  <!-- Rear panel indication -->
+  <rect x="50" y="370" width="800" height="40" rx="0" fill="#e9d5ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6b21a8">REAR PANEL</text>
+  
+  <!-- Front panel indication -->
+  <rect x="50" y="60" width="800" height="30" rx="0" fill="#e9d5ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6b21a8">FRONT PANEL</text>
+  
+  <!-- ===== POWER BUTTON (OEM) ===== -->
+  <rect x="100" y="100" width="150" height="120" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="175" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">POWER BUTTON</text>
+  <text x="175" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">(OEM - Front Panel)</text>
+  
+  <!-- Button symbol -->
+  <rect x="140" y="155" width="70" height="40" rx="4" fill="white" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="175" cy="175" r="12" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+  <text x="175" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">PWR</text>
+  
+  <!-- Button terminals -->
+  <rect x="135" y="200" width="20" height="15" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+  <text x="145" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">T1</text>
+  <rect x="195" y="200" width="20" height="15" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+  <text x="205" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">T2</text>
+  
+  <!-- ===== ADDED RELAY ===== -->
+  <rect x="350" y="140" width="180" height="180" rx="6" fill="white" stroke="#374151" stroke-width="2"/>
+  <text x="440" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#374151">RELAY (ADDED)</text>
+  <text x="440" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">12V DC SPST-NO</text>
+  <text x="440" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">~35-40mA coil</text>
+  
+  <!-- Relay internal diagram -->
+  <!-- Coil -->
+  <rect x="370" y="210" width="60" height="35" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="400" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#92400e">COIL</text>
+  
+  <!-- Coil terminals -->
+  <circle cx="380" y="255" r="6" fill="#d97706" stroke="#92400e" stroke-width="1"/>
+  <text x="380" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">+</text>
+  <circle cx="420" cy="255" r="6" fill="#64748b" stroke="#475569" stroke-width="1"/>
+  <text x="420" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">−</text>
+  
+  <!-- Contacts -->
+  <rect x="450" y="210" width="60" height="70" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="480" y="227" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#166534">CONTACTS</text>
+  
+  <!-- N.O. contact symbol -->
+  <line x1="460" y1="250" x2="470" y2="250" stroke="#374151" stroke-width="2"/>
+  <line x1="470" y1="250" x2="490" y2="240" stroke="#374151" stroke-width="2"/>
+  <circle cx="493" cy="250" r="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+  <line x1="497" y1="250" x2="507" y2="250" stroke="#374151" stroke-width="2"/>
+  <text x="480" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6b7280">N.O.</text>
+  
+  <!-- Contact terminals -->
+  <circle cx="460" cy="290" r="6" fill="#16a34a" stroke="#15803d" stroke-width="1"/>
+  <text x="460" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">C</text>
+  <circle cx="500" cy="290" r="6" fill="#16a34a" stroke="#15803d" stroke-width="1"/>
+  <text x="500" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">NO</text>
+  
+  <!-- ===== FLYBACK DIODE ===== -->
+  <rect x="370" y="295" width="60" height="25" rx="3" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="400" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">1N4001</text>
+  
+  <!-- Diode band indicator -->
+  <rect x="415" y="295" width="8" height="25" fill="#dc2626"/>
+  
+  <!-- ===== 3.5mm JACK (ADDED) ===== -->
+  <rect x="600" y="250" width="140" height="130" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="670" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">3.5mm JACK</text>
+  <text x="670" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a16207">(ADDED)</text>
+  <text x="670" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a16207">Mono Panel Mount</text>
+  
+  <!-- Jack symbol -->
+  <circle cx="670" cy="340" r="20" fill="white" stroke="#d97706" stroke-width="2"/>
+  <circle cx="670" cy="340" r="8" fill="#d97706"/>
+  
+  <!-- Jack terminals -->
+  <rect x="620" y="365" width="30" height="12" fill="#d97706" stroke="#92400e" stroke-width="1"/>
+  <text x="635" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">TIP</text>
+  <rect x="700" y="365" width="30" height="12" fill="#64748b" stroke="#475569" stroke-width="1"/>
+  <text x="715" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">SLV</text>
+  
+  <!-- Mounting note -->
+  <text x="670" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6b7280">Mount in rear panel</text>
+  
+  <!-- ===== WIRING ===== -->
+  
+  <!-- Tip to Coil + (orange) -->
+  <path d="M 635 365 L 635 340 L 550 340 L 550 255 L 380 255" fill="none" stroke="#d97706" stroke-width="3"/>
+  <circle cx="380" cy="255" r="8" fill="none" stroke="#d97706" stroke-width="2"/>
+  
+  <!-- Sleeve to Coil - (gray) -->
+  <path d="M 715 377 L 715 400 L 560 400 L 560 255 L 420 255" fill="none" stroke="#64748b" stroke-width="3"/>
+  <circle cx="420" cy="255" r="8" fill="none" stroke="#64748b" stroke-width="2"/>
+  
+  <!-- Relay COM to Button T1 (green) -->
+  <path d="M 460 290 L 460 330 L 300 330 L 300 207 L 145 207" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <circle cx="145" cy="207" r="8" fill="none" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Relay N.O. to Button T2 (green) -->
+  <path d="M 500 290 L 500 345 L 280 345 L 280 207 L 205 207" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <circle cx="205" cy="207" r="8" fill="none" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Flyback diode connections (dashed red) -->
+  <line x1="370" y1="307" x2="350" y2="307" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="350" y1="255" x2="350" y2="307" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="350" y1="255" x2="374" y2="255" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="430" y1="307" x2="540" y2="307" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="540" y1="255" x2="540" y2="307" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="426" y1="255" x2="540" y2="255" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- ===== SIGNAL FLOW ANNOTATION ===== -->
+  <rect x="50" y="430" width="400" height="110" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="250" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">HOW IT WORKS</text>
+  <text x="60" y="470" font-family="Arial, sans-serif" font-size="10" fill="#166534">1. Distribution box sends 12V to 3.5mm jack</text>
+  <text x="60" y="488" font-family="Arial, sans-serif" font-size="10" fill="#166534">2. Coil energizes → relay contacts close</text>
+  <text x="60" y="506" font-family="Arial, sans-serif" font-size="10" fill="#166534">3. Contacts short T1-T2 → same as pressing button</text>
+  <text x="60" y="524" font-family="Arial, sans-serif" font-size="10" fill="#166534">4. Amp executes native soft-start → NO THUMP</text>
+  
+  <!-- ===== LEGEND ===== -->
+  <rect x="470" y="430" width="180" height="110" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="560" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#475569">WIRE COLORS</text>
+  <line x1="485" y1="468" x2="520" y2="468" stroke="#d97706" stroke-width="3"/>
+  <text x="530" y="472" font-family="Arial, sans-serif" font-size="9" fill="#475569">+12V (from jack tip)</text>
+  <line x1="485" y1="488" x2="520" y2="488" stroke="#64748b" stroke-width="3"/>
+  <text x="530" y="492" font-family="Arial, sans-serif" font-size="9" fill="#475569">GND (from jack sleeve)</text>
+  <line x1="485" y1="508" x2="520" y2="508" stroke="#16a34a" stroke-width="3"/>
+  <text x="530" y="512" font-family="Arial, sans-serif" font-size="9" fill="#475569">To button terminals</text>
+  <line x1="485" y1="528" x2="520" y2="528" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="530" y="532" font-family="Arial, sans-serif" font-size="9" fill="#475569">Flyback diode</text>
+  
+  <!-- ===== PARTS CALLOUT ===== -->
+  <rect x="670" y="430" width="180" height="110" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="760" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">PARTS PER AMP</text>
+  <text x="680" y="470" font-family="Arial, sans-serif" font-size="9" fill="#92400e">• 12V micro relay ........ $3.50</text>
+  <text x="680" y="488" font-family="Arial, sans-serif" font-size="9" fill="#92400e">• 3.5mm panel jack ...... $1.50</text>
+  <text x="680" y="506" font-family="Arial, sans-serif" font-size="9" fill="#92400e">• 1N4001 diode .......... $0.10</text>
+  <text x="680" y="524" font-family="Arial, sans-serif" font-size="9" fill="#92400e">• Wire + shrink ......... (stock)</text>
+  <text x="680" y="540" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#92400e">TOTAL: ~$5.10/amp</text>
+  
+  <!-- ===== IMPORTANT NOTES ===== -->
+  <rect x="100" y="230" width="130" height="60" rx="4" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="165" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">⚠️ CRITICAL</text>
+  <text x="165" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#b91c1c">Relay wired PARALLEL</text>
+  <text x="165" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#b91c1c">to button, not series</text>
+  <text x="165" y="289" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#b91c1c">Button still works!</text>
+</svg>

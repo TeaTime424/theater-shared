@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual-Opposed Sub - Window Brace Detail</title>
+    <style>
+        body {
+            background: #1a1a2e;
+            color: #eee;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #fff; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .diagram {
+            background: #252540;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .diagram h2 {
+            color: #7eb8da;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        svg { display: block; margin: 0 auto; }
+        
+        .brace { fill: #c4a574; stroke: #8b7355; stroke-width: 2; }
+        .cutout { fill: #1a1a2e; stroke: #666; stroke-width: 1.5; stroke-dasharray: 5,3; }
+        .cutout-solid { fill: #1a1a2e; stroke: #666; stroke-width: 1.5; }
+        
+        .dim-line { stroke: #f0a050; stroke-width: 1; }
+        .dim-text { font-size: 12px; fill: #f0a050; font-weight: bold; }
+        .label { font-size: 11px; fill: #ccc; }
+        .label-small { font-size: 10px; fill: #999; }
+        .annotation { font-size: 10px; fill: #7eb8da; }
+        
+        .step-number {
+            fill: #f0a050;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .note {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        .note strong { color: #f0a050; }
+    </style>
+</head>
+<body>
+    <h1>Window Brace Construction</h1>
+    <p class="subtitle">Cut 2 Identical Braces</p>
+    
+    <div class="container">
+        
+        <!-- Brace dimensions -->
+        <div class="diagram">
+            <h2>Window Brace — Dimensions & Cutting</h2>
+            <svg width="800" height="280" viewBox="0 0 800 280">
+                
+                <!-- Step 1: Blank -->
+                <g transform="translate(50, 40)">
+                    <text x="0" y="-15" class="step-number">1</text>
+                    <text x="20" y="-15" class="label">Cut blank: 28" × 4"</text>
+                    
+                    <rect x="0" y="0" width="280" height="40" class="brace" rx="2"/>
+                    
+                    <!-- Dimension: length -->
+                    <line x1="0" y1="55" x2="280" y2="55" class="dim-line"/>
+                    <line x1="0" y1="50" x2="0" y2="60" class="dim-line"/>
+                    <line x1="280" y1="50" x2="280" y2="60" class="dim-line"/>
+                    <text x="140" y="75" text-anchor="middle" class="dim-text">28.0"</text>
+                    
+                    <!-- Dimension: width -->
+                    <line x1="295" y1="0" x2="295" y2="40" class="dim-line"/>
+                    <line x1="290" y1="0" x2="300" y2="0" class="dim-line"/>
+                    <line x1="290" y1="40" x2="300" y2="40" class="dim-line"/>
+                    <text x="315" y="25" class="dim-text">4.0"</text>
+                </g>
+                
+                <!-- Step 2: Mark window -->
+                <g transform="translate(400, 40)">
+                    <text x="0" y="-15" class="step-number">2</text>
+                    <text x="20" y="-15" class="label">Mark window: 8" from each end</text>
+                    
+                    <rect x="0" y="0" width="280" height="40" class="brace" rx="2"/>
+                    
+                    <!-- Window marking (dashed) -->
+                    <rect x="80" y="0" width="120" height="40" class="cutout" rx="1"/>
+                    
+                    <!-- Mark lines -->
+                    <line x1="80" y1="-5" x2="80" y2="45" stroke="#f0a050" stroke-width="1" stroke-dasharray="3,2"/>
+                    <line x1="200" y1="-5" x2="200" y2="45" stroke="#f0a050" stroke-width="1" stroke-dasharray="3,2"/>
+                    
+                    <!-- Dimensions -->
+                    <line x1="0" y1="55" x2="80" y2="55" class="dim-line"/>
+                    <line x1="0" y1="50" x2="0" y2="60" class="dim-line"/>
+                    <line x1="80" y1="50" x2="80" y2="60" class="dim-line"/>
+                    <text x="40" y="75" text-anchor="middle" class="dim-text">8.0"</text>
+                    
+                    <line x1="80" y1="55" x2="200" y2="55" stroke="#666" stroke-width="1"/>
+                    <text x="140" y="75" text-anchor="middle" class="dim-text" style="fill: #888;">12.0"</text>
+                    
+                    <line x1="200" y1="55" x2="280" y2="55" class="dim-line"/>
+                    <line x1="200" y1="50" x2="200" y2="60" class="dim-line"/>
+                    <line x1="280" y1="50" x2="280" y2="60" class="dim-line"/>
+                    <text x="240" y="75" text-anchor="middle" class="dim-text">8.0"</text>
+                    
+                    <text x="140" y="25" text-anchor="middle" class="annotation">REMOVE</text>
+                </g>
+                
+                <!-- Step 3: Finished brace -->
+                <g transform="translate(50, 160)">
+                    <text x="0" y="-15" class="step-number">3</text>
+                    <text x="20" y="-15" class="label">Cut window with jigsaw (drill starter hole first)</text>
+                    
+                    <!-- Left section -->
+                    <rect x="0" y="0" width="80" height="40" class="brace" rx="2"/>
+                    <!-- Right section -->
+                    <rect x="200" y="0" width="80" height="40" class="brace" rx="2"/>
+                    <!-- Window (empty) -->
+                    <rect x="80" y="0" width="120" height="40" class="cutout-solid" rx="1"/>
+                    
+                    <text x="40" y="25" text-anchor="middle" class="label">SOLID</text>
+                    <text x="140" y="25" text-anchor="middle" class="annotation">WINDOW</text>
+                    <text x="240" y="25" text-anchor="middle" class="label">SOLID</text>
+                    
+                    <!-- Repeat indicator -->
+                    <text x="350" y="25" class="label">← Cut 2 identical</text>
+                </g>
+                
+            </svg>
+            
+            <div class="note">
+                <strong>Cutting the window:</strong><br>
+                1. Mark cut lines at 8" from each end<br>
+                2. Drill a ½" starter hole inside the waste area<br>
+                3. Insert jigsaw blade and cut along marked lines<br>
+                4. Sand edges smooth
+            </div>
+        </div>
+        
+        <!-- Why window braces -->
+        <div class="diagram">
+            <h2>Why Window Braces? — Motor Clearance</h2>
+            <svg width="700" height="350" viewBox="0 0 700 350">
+                
+                <!-- Cross section showing motor clearance -->
+                <g transform="translate(50, 30)">
+                    <text x="250" y="0" text-anchor="middle" class="label" style="font-size: 12px;">SIDE VIEW — Brace positioned to clear driver motor</text>
+                    
+                    <!-- Top panel -->
+                    <rect x="100" y="30" width="300" height="12" fill="#c4a574" stroke="#8b7355" stroke-width="1.5"/>
+                    <text x="250" y="25" text-anchor="middle" class="label-small">Top Panel</text>
+                    
+                    <!-- Driver in top -->
+                    <ellipse cx="250" cy="36" rx="60" ry="8" fill="#2d2d4a" stroke="#f0a050" stroke-width="2"/>
+                    
+                    <!-- Motor structure -->
+                    <rect x="210" y="42" width="80" height="50" fill="#3a3a5a" stroke="#f0a050" stroke-width="1.5" rx="3"/>
+                    <text x="250" y="72" text-anchor="middle" class="label-small" style="fill: #f0a050;">MOTOR</text>
+                    <text x="250" y="87" text-anchor="middle" class="label-small" style="fill: #f0a050;">~5" deep</text>
+                    
+                    <!-- Clearance zone -->
+                    <rect x="180" y="92" width="140" height="30" fill="rgba(100,255,150,0.1)" stroke="#8c8" stroke-width="1" stroke-dasharray="4,2"/>
+                    <text x="250" y="112" text-anchor="middle" class="label-small" style="fill: #8c8;">Clearance</text>
+                    
+                    <!-- Brace -->
+                    <rect x="100" y="122" width="100" height="15" fill="#b89a64" stroke="#8b7355" stroke-width="1"/>
+                    <rect x="200" y="122" width="100" height="15" fill="none" stroke="#666" stroke-width="1"/>
+                    <rect x="300" y="122" width="100" height="15" fill="#b89a64" stroke="#8b7355" stroke-width="1"/>
+                    <text x="250" y="135" text-anchor="middle" class="label-small">WINDOW BRACE</text>
+                    
+                    <!-- Dimension: 9.5" from top -->
+                    <line x1="420" y1="42" x2="420" y2="130" class="dim-line"/>
+                    <line x1="415" y1="42" x2="425" y2="42" class="dim-line"/>
+                    <line x1="415" y1="130" x2="425" y2="130" class="dim-line"/>
+                    <text x="445" y="90" class="dim-text">9.5"</text>
+                    
+                    <!-- Annotation -->
+                    <text x="500" y="75" class="annotation">Motor extends ~5" into cabinet.</text>
+                    <text x="500" y="92" class="annotation">Brace at 9.5" provides clearance</text>
+                    <text x="500" y="109" class="annotation">plus safety margin.</text>
+                </g>
+                
+                <!-- Top view showing window purpose -->
+                <g transform="translate(50, 200)">
+                    <text x="250" y="0" text-anchor="middle" class="label" style="font-size: 12px;">TOP VIEW — Window allows pressure equalization</text>
+                    
+                    <!-- Brace outline -->
+                    <rect x="100" y="30" width="300" height="80" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,2"/>
+                    
+                    <!-- Left solid section -->
+                    <rect x="100" y="30" width="86" height="80" fill="#b89a64" stroke="#8b7355" stroke-width="1.5" rx="2"/>
+                    
+                    <!-- Right solid section -->
+                    <rect x="314" y="30" width="86" height="80" fill="#b89a64" stroke="#8b7355" stroke-width="1.5" rx="2"/>
+                    
+                    <!-- Window (center) -->
+                    <rect x="186" y="30" width="128" height="80" fill="rgba(100,200,255,0.1)" stroke="#64c8ff" stroke-width="1"/>
+                    
+                    <!-- Motor footprint (dashed circle) -->
+                    <ellipse cx="250" cy="70" rx="45" ry="35" fill="none" stroke="#f0a050" stroke-width="1" stroke-dasharray="4,2"/>
+                    <text x="250" y="75" text-anchor="middle" class="label-small" style="fill: #f0a050;">Motor</text>
+                    
+                    <!-- Labels -->
+                    <text x="143" y="75" text-anchor="middle" class="label">SOLID</text>
+                    <text x="357" y="75" text-anchor="middle" class="label">SOLID</text>
+                    <text x="250" y="125" text-anchor="middle" class="annotation">Window clears motor and</text>
+                    <text x="250" y="140" text-anchor="middle" class="annotation">allows air pressure to equalize</text>
+                </g>
+                
+            </svg>
+        </div>
+        
+        <!-- Brace installation -->
+        <div class="diagram">
+            <h2>Brace Installation Positions</h2>
+            <svg width="500" height="400" viewBox="0 0 500 400">
+                <!-- Cabinet outline -->
+                <rect x="100" y="30" width="250" height="340" fill="none" stroke="#888" stroke-width="2" rx="3"/>
+                
+                <!-- Top panel indication -->
+                <rect x="100" y="30" width="250" height="12" fill="#c4a574" stroke="#8b7355" stroke-width="1"/>
+                <text x="225" y="20" text-anchor="middle" class="label-small">TOP</text>
+                
+                <!-- Bottom panel indication -->
+                <rect x="100" y="358" width="250" height="12" fill="#c4a574" stroke="#8b7355" stroke-width="1"/>
+                <text x="225" y="390" text-anchor="middle" class="label-small">BOTTOM</text>
+                
+                <!-- Upper brace -->
+                <rect x="110" y="125" width="230" height="12" fill="#b89a64" stroke="#8b7355" stroke-width="1.5"/>
+                <rect x="185" y="125" width="80" height="12" fill="#252540" stroke="#666" stroke-width="1"/>
+                <text x="225" y="135" text-anchor="middle" class="label-small">UPPER BRACE</text>
+                
+                <!-- Lower brace -->
+                <rect x="110" y="263" width="230" height="12" fill="#b89a64" stroke="#8b7355" stroke-width="1.5"/>
+                <rect x="185" y="263" width="80" height="12" fill="#252540" stroke="#666" stroke-width="1"/>
+                <text x="225" y="273" text-anchor="middle" class="label-small">LOWER BRACE</text>
+                
+                <!-- Center line -->
+                <line x1="100" y1="200" x2="350" y2="200" stroke="#666" stroke-width="1" stroke-dasharray="5,5"/>
+                <text x="370" y="204" class="label-small">Center</text>
+                
+                <!-- Dimensions from top -->
+                <line x1="70" y1="42" x2="70" y2="131" class="dim-line"/>
+                <line x1="65" y1="42" x2="75" y2="42" class="dim-line"/>
+                <line x1="65" y1="131" x2="75" y2="131" class="dim-line"/>
+                <text x="50" y="90" text-anchor="middle" class="dim-text" transform="rotate(-90, 50, 90)">9.5"</text>
+                
+                <!-- Dimensions from bottom -->
+                <line x1="70" y1="269" x2="70" y2="358" class="dim-line"/>
+                <line x1="65" y1="269" x2="75" y2="269" class="dim-line"/>
+                <line x1="65" y1="358" x2="75" y2="358" class="dim-line"/>
+                <text x="50" y="315" text-anchor="middle" class="dim-text" transform="rotate(-90, 50, 315)">9.5"</text>
+                
+                <!-- Driver zones (indicated) -->
+                <ellipse cx="225" cy="70" rx="50" ry="15" fill="none" stroke="#f0a050" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="225" y="75" text-anchor="middle" class="label-small" style="fill: #f0a050;">Top driver zone</text>
+                
+                <ellipse cx="225" cy="330" rx="50" ry="15" fill="none" stroke="#f0a050" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="225" y="335" text-anchor="middle" class="label-small" style="fill: #f0a050;">Bottom driver zone</text>
+                
+                <!-- Annotations -->
+                <text x="380" y="131" class="annotation">← Glue to all 4 sides</text>
+                <text x="380" y="148" class="annotation-small" style="font-size: 8px; fill: #888;">Brad nail through sides</text>
+                
+                <text x="380" y="269" class="annotation">← Glue to all 4 sides</text>
+                <text x="380" y="286" class="annotation-small" style="font-size: 8px; fill: #888;">Brad nail through sides</text>
+            </svg>
+            
+            <div class="note">
+                <strong>Installation:</strong><br>
+                1. Mark brace positions: 9.5" from top and bottom panel inner faces<br>
+                2. Apply glue to brace ends (all four contact points)<br>
+                3. Slide brace into position, window centered<br>
+                4. Check level<br>
+                5. Brad nail through side panels into brace ends (2-3 brads per end)
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

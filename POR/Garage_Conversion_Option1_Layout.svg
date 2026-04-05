@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1080" width="800" height="1080">
+  <defs>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d2d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="riserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d3d3d"/>
+      <stop offset="100%" style="stop-color:#2a2a2a"/>
+    </linearGradient>
+    <linearGradient id="stageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="equipGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#172554"/>
+    </linearGradient>
+    <linearGradient id="hallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f1f1f"/>
+      <stop offset="100%" style="stop-color:#171717"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="1080" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">9.4.6 Dolby Atmos Configuration</text>
+  <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">14' × 25' × 10' Room — Denon AVR-A1H — 145" Screen</text>
+  
+  <!-- Configuration badge -->
+  <rect x="300" y="75" width="200" height="22" rx="11" fill="#1e40af" stroke="#3b82f6" stroke-width="1"/>
+  <text x="400" y="91" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">9 BED · 4 SUB · 6 HEIGHT</text>
+  
+  <!-- ========== EQUIPMENT ROOM ========== -->
+  <rect x="450" y="820" width="250" height="115" rx="4" fill="url(#equipGrad)" stroke="#1e40af" stroke-width="2"/>
+  <text x="575" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#60a5fa">EQUIPMENT ROOM</text>
+  <text x="575" y="862" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6">7' W × 4' D (outside theater)</text>
+  
+  <rect x="470" y="875" width="50" height="50" rx="3" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+  <text x="495" y="895" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">Denon</text>
+  <text x="495" y="907" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">A1H</text>
+  
+  <rect x="530" y="875" width="50" height="50" rx="3" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+  <text x="555" y="895" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">NX6000D</text>
+  <text x="555" y="907" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">×5</text>
+  
+  <rect x="590" y="875" width="50" height="50" rx="3" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+  <text x="615" y="895" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">DSP</text>
+  <text x="615" y="907" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">408</text>
+  
+  <rect x="650" y="875" width="40" height="50" rx="3" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+  <text x="670" y="900" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af">UPS</text>
+  
+  <!-- Hallway -->
+  <rect x="100" y="820" width="350" height="115" rx="4" fill="url(#hallGrad)" stroke="#333" stroke-width="1"/>
+  <text x="275" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#525252">HALLWAY / ACCESS</text>
+  
+  <!-- ========== THEATER ROOM ========== -->
+  <rect x="100" y="115" width="600" height="700" rx="6" fill="url(#floorGrad)" stroke="#404040" stroke-width="3"/>
+  
+  <!-- ALIGNMENT AXIS LINES (for L/R, Atmos, SBL/SBR only) -->
+  <line x1="204" y1="130" x2="204" y2="800" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2,6" opacity="0.3"/>
+  <line x1="596" y1="130" x2="596" y2="800" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2,6" opacity="0.3"/>
+  
+  <!-- Axis labels at top -->
+  <text x="204" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#3b82f6" opacity="0.6">L AXIS</text>
+  <text x="596" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#3b82f6" opacity="0.6">R AXIS</text>
+  
+  <!-- Dimension labels -->
+  <text x="400" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">FRONT WALL (14')</text>
+  <text x="55" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" transform="rotate(-90,55,465)">25' DEPTH</text>
+  
+  <!-- ========== FRONT STAGE AREA ========== -->
+  <rect x="100" y="115" width="600" height="85" fill="url(#stageGrad)" stroke="#333" stroke-width="2"/>
+  
+  <line x1="95" y1="115" x2="95" y2="200" stroke="#737373" stroke-width="1"/>
+  <line x1="90" y1="115" x2="100" y2="115" stroke="#737373" stroke-width="1"/>
+  <line x1="90" y1="200" x2="100" y2="200" stroke="#737373" stroke-width="1"/>
+  <text x="80" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#737373" transform="rotate(-90,80,162)">3' STAGE</text>
+  
+  <text x="400" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#525252">STAGE PLATFORM (27" HEIGHT)</text>
+  <text x="400" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#404040">LCR speakers + corner subwoofers behind AT screen</text>
+  
+  <!-- Fake wall -->
+  <rect x="140" y="200" width="520" height="18" fill="#252525" stroke="#404040" stroke-width="1"/>
+  <text x="400" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#606060">FAKE WALL (6")</text>
+  
+  <!-- Gap -->
+  <rect x="140" y="218" width="520" height="4" fill="#1a1a1a"/>
+  
+  <!-- SCREEN -->
+  <rect x="140" y="222" width="520" height="8" rx="1" fill="#0ea5e9" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="140" y="222" width="520" height="8" rx="1" fill="none" stroke="#0ea5e9" stroke-width="4" opacity="0.3"/>
+  
+  <text x="400" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0ea5e9">145" AT SCREEN</text>
+  <text x="400" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#0284c7">11.1' W × 4.7' H (2.35:1)</text>
+  
+  <line x1="95" y1="200" x2="95" y2="226" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="78" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0ea5e9" transform="rotate(-90,78,216)">6"+1"</text>
+  
+  <!-- Viewing distance markers -->
+  <line x1="720" y1="226" x2="720" y2="496" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="735" y="361" text-anchor="start" font-family="Arial, sans-serif" font-size="10" fill="#fbbf24" transform="rotate(90,735,361)">10' to MLP</text>
+  
+  <line x1="745" y1="226" x2="745" y2="644" stroke="#22c55e" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="760" y="435" text-anchor="start" font-family="Arial, sans-serif" font-size="10" fill="#22c55e" transform="rotate(90,760,435)">15.3' to Row 2</text>
+  
+  <!-- Door -->
+  <rect x="350" y="805" width="100" height="20" rx="0" fill="#1a1a1a" stroke="#525252" stroke-width="2"/>
+  <line x1="350" y1="815" x2="450" y2="815" stroke="#737373" stroke-width="1"/>
+  <text x="400" y="800" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#737373">ENTRY DOOR</text>
+  <path d="M 450 815 Q 450 750 385 750" fill="none" stroke="#525252" stroke-width="1" stroke-dasharray="4,3"/>
+  
+  <!-- Riser platform -->
+  <rect x="110" y="566" width="580" height="134" rx="4" fill="url(#riserGrad)" stroke="#525252" stroke-width="2"/>
+  <text x="400" y="582" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#737373">RISER PLATFORM (24" height)</text>
+  
+  <!-- === ROW 1 SEATING === -->
+  <rect x="270" y="455" width="260" height="40" rx="6" fill="#52525b" stroke="#3f3f46" stroke-width="2"/>
+  <rect x="265" y="445" width="270" height="12" rx="4" fill="#3f3f46"/>
+  
+  <circle cx="320" cy="478" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="370" cy="478" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="430" cy="478" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="480" cy="478" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  
+  <circle cx="400" cy="478" r="22" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="4,3"/>
+  
+  <rect x="520" y="460" width="70" height="36" rx="4" fill="#fbbf24" opacity="0.9"/>
+  <text x="555" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#000">MLP</text>
+  <text x="555" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#000">58°</text>
+  
+  <text x="150" y="478" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">Row 1</text>
+  <text x="150" y="492" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#a3a3a3">10' from screen</text>
+  
+  <!-- === NEARFIELD SOFA TABLE === -->
+  <rect x="330" y="520" width="140" height="35" rx="4" fill="#3f3f46" stroke="#525252" stroke-width="2"/>
+  <text x="400" y="532" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#737373">SOFA TABLE</text>
+  
+  <rect x="345" y="540" width="40" height="12" rx="2" fill="#c026d3" stroke="#a21caf" stroke-width="1.5"/>
+  <rect x="415" y="540" width="40" height="12" rx="2" fill="#c026d3" stroke="#a21caf" stroke-width="1.5"/>
+  <text x="400" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e879f9">NEARFIELD ×2</text>
+  
+  <!-- === ROW 2 SEATING === -->
+  <rect x="270" y="624" width="260" height="40" rx="6" fill="#52525b" stroke="#3f3f46" stroke-width="2"/>
+  <rect x="265" y="614" width="270" height="12" rx="4" fill="#3f3f46"/>
+  
+  <circle cx="320" cy="647" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="370" cy="647" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="430" cy="647" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="480" cy="647" r="8" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  
+  <rect x="520" y="629" width="70" height="36" rx="4" fill="#22c55e" opacity="0.9"/>
+  <text x="555" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#000">THX Ideal</text>
+  <text x="555" y="659" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#000">40°</text>
+  
+  <text x="150" y="647" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#22c55e">Row 2</text>
+  <text x="150" y="661" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#a3a3a3">15.3' from screen</text>
+  
+  <!-- ========== LCR SPEAKERS - L and R ON AXIS ========== -->
+  <!-- L speaker centered on LEFT_AXIS -->
+  <rect x="192" y="165" width="24" height="30" rx="3" fill="#4a90d9" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="204" cy="175" r="4" fill="#1e3a5f"/>
+  <circle cx="204" cy="186" r="5" fill="#1e3a5f"/>
+  <text x="204" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4a90d9">L</text>
+  
+  <!-- Center stays at center -->
+  <rect x="388" y="165" width="24" height="30" rx="3" fill="#4a90d9" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="400" cy="175" r="4" fill="#1e3a5f"/>
+  <circle cx="400" cy="186" r="5" fill="#1e3a5f"/>
+  <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4a90d9">C</text>
+  
+  <!-- R speaker centered on RIGHT_AXIS -->
+  <rect x="584" y="165" width="24" height="30" rx="3" fill="#4a90d9" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="596" cy="175" r="4" fill="#1e3a5f"/>
+  <circle cx="596" cy="186" r="5" fill="#1e3a5f"/>
+  <text x="596" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4a90d9">R</text>
+  
+  <!-- ========== WALL-MOUNTED SURROUNDS (on walls, NOT on axis) ========== -->
+  
+  <!-- Front Wide Left/Right - ON WALLS -->
+  <rect x="108" y="340" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="117" cy="348" r="3" fill="#0f3d1a"/>
+  <circle cx="117" cy="359" r="4" fill="#0f3d1a"/>
+  <text x="117" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">FWL</text>
+  
+  <rect x="674" y="340" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="683" cy="348" r="3" fill="#0f3d1a"/>
+  <circle cx="683" cy="359" r="4" fill="#0f3d1a"/>
+  <text x="683" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">FWR</text>
+  
+  <!-- Side Surround Left/Right - ON WALLS -->
+  <rect x="108" y="465" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="117" cy="473" r="3" fill="#0f3d1a"/>
+  <circle cx="117" cy="484" r="4" fill="#0f3d1a"/>
+  <text x="117" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">SL</text>
+  
+  <rect x="674" y="465" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="683" cy="473" r="3" fill="#0f3d1a"/>
+  <circle cx="683" cy="484" r="4" fill="#0f3d1a"/>
+  <text x="683" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">SR</text>
+  
+  <!-- Surround Back Left/Right - ON AXIS (rear wall) -->
+  <rect x="195" y="760" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="204" cy="768" r="3" fill="#0f3d1a"/>
+  <circle cx="204" cy="779" r="4" fill="#0f3d1a"/>
+  <text x="204" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">SBL</text>
+  
+  <rect x="587" y="760" width="18" height="26" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="596" cy="768" r="3" fill="#0f3d1a"/>
+  <circle cx="596" cy="779" r="4" fill="#0f3d1a"/>
+  <text x="596" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">SBR</text>
+  
+  <!-- ========== HEIGHT SPEAKERS - ON AXIS ========== -->
+  
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a3a3a3">— ceiling mounted (aligned with L/R) —</text>
+  
+  <!-- Top Front Left/Right - ON AXIS -->
+  <rect x="191" y="300" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="204" cy="313" r="7" fill="#7c2d12"/>
+  <circle cx="204" cy="313" r="3" fill="#431407"/>
+  <text x="204" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TFL</text>
+  
+  <rect x="583" y="300" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="596" cy="313" r="7" fill="#7c2d12"/>
+  <circle cx="596" cy="313" r="3" fill="#431407"/>
+  <text x="596" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TFR</text>
+  
+  <!-- Top Middle Left/Right - ON AXIS -->
+  <rect x="191" y="520" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="204" cy="533" r="7" fill="#7c2d12"/>
+  <circle cx="204" cy="533" r="3" fill="#431407"/>
+  <text x="184" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TML</text>
+  
+  <rect x="583" y="520" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="596" cy="533" r="7" fill="#7c2d12"/>
+  <circle cx="596" cy="533" r="3" fill="#431407"/>
+  <text x="616" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TMR</text>
+  
+  <!-- Top Rear Left/Right - ON AXIS -->
+  <rect x="191" y="710" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="204" cy="723" r="7" fill="#7c2d12"/>
+  <circle cx="204" cy="723" r="3" fill="#431407"/>
+  <text x="204" y="750" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TRL</text>
+  
+  <rect x="583" y="710" width="26" height="26" rx="4" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="596" cy="723" r="7" fill="#7c2d12"/>
+  <circle cx="596" cy="723" r="3" fill="#431407"/>
+  <text x="596" y="750" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">TRR</text>
+  
+  <!-- ========== SUBWOOFERS (corners) ========== -->
+  
+  <!-- Front Left corner -->
+  <rect x="108" y="160" width="30" height="30" rx="4" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="123" cy="175" r="10" fill="#3b0764"/>
+  <text x="123" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">SUB×2</text>
+  
+  <!-- Front Right corner -->
+  <rect x="662" y="160" width="30" height="30" rx="4" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="677" cy="175" r="10" fill="#3b0764"/>
+  <text x="677" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">SUB×2</text>
+  
+  <!-- Rear Left corner -->
+  <rect x="108" y="760" width="30" height="30" rx="4" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="123" cy="775" r="10" fill="#3b0764"/>
+  <text x="123" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">SUB×2</text>
+  
+  <!-- Rear Right corner -->
+  <rect x="662" y="760" width="30" height="30" rx="4" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="677" cy="775" r="10" fill="#3b0764"/>
+  <text x="677" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">SUB×2</text>
+  
+  <!-- ========== ANGLE REFERENCE LINES ========== -->
+  
+  <!-- L/R angle from MLP (to L/R speakers on axis) -->
+  <line x1="400" y1="478" x2="204" y2="180" stroke="#4a90d9" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  <line x1="400" y1="478" x2="596" y2="180" stroke="#4a90d9" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  
+  <!-- Front wide angle lines (to walls) -->
+  <line x1="400" y1="478" x2="117" y2="353" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  <line x1="400" y1="478" x2="683" y2="353" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  
+  <!-- Side surround lines (to walls) -->
+  <line x1="400" y1="478" x2="117" y2="478" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  <line x1="400" y1="478" x2="683" y2="478" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.35"/>
+  
+  <!-- Surround back lines (to axis positions) -->
+  <line x1="400" y1="478" x2="204" y2="773" stroke="#22c55e" stroke-width="1" stroke-dasharray="6,4" opacity="0.25"/>
+  <line x1="400" y1="478" x2="596" y2="773" stroke="#22c55e" stroke-width="1" stroke-dasharray="6,4" opacity="0.25"/>
+  
+  <!-- Angle labels -->
+  <rect x="219" y="270" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="235" y="281" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#4a90d9">25°</text>
+  
+  <rect x="549" y="270" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="565" y="281" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#4a90d9">25°</text>
+  
+  <rect x="140" y="395" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="156" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">55°</text>
+  
+  <rect x="628" y="395" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="644" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">55°</text>
+  
+  <rect x="140" y="471" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="156" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">90°</text>
+  
+  <rect x="628" y="471" width="32" height="14" rx="3" fill="#0f0f0f" opacity="0.85"/>
+  <text x="644" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">90°</text>
+  
+  <!-- ========== LEGEND ========== -->
+  <rect x="100" y="950" width="600" height="120" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  
+  <text x="400" y="970" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#737373">15 CHANNELS — L/R + ATMOS + SB ALIGNED</text>
+  
+  <!-- Speaker legend row -->
+  <rect x="115" y="985" width="14" height="20" rx="2" fill="#4a90d9" stroke="#2563eb" stroke-width="1"/>
+  <text x="135" y="1000" font-family="Arial, sans-serif" font-size="10" fill="#4a90d9">LCR (3)</text>
+  
+  <rect x="195" y="987" width="12" height="16" rx="2" fill="#22c55e" stroke="#16a34a" stroke-width="1"/>
+  <text x="213" y="1000" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">Surrounds (6)</text>
+  
+  <rect x="310" y="985" width="18" height="18" rx="3" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+  <text x="333" y="999" font-family="Arial, sans-serif" font-size="10" fill="#f97316">Atmos (6)</text>
+  
+  <rect x="410" y="985" width="18" height="18" rx="3" fill="#8b5cf6" stroke="#7c3aed" stroke-width="1"/>
+  <text x="433" y="999" font-family="Arial, sans-serif" font-size="10" fill="#8b5cf6">Corner (8)</text>
+  
+  <rect x="510" y="987" width="18" height="12" rx="2" fill="#c026d3" stroke="#a21caf" stroke-width="1"/>
+  <text x="533" y="999" font-family="Arial, sans-serif" font-size="10" fill="#e879f9">Nearfield (2)</text>
+  
+  <rect x="615" y="985" width="18" height="18" rx="3" fill="url(#equipGrad)" stroke="#1e40af" stroke-width="1"/>
+  <text x="638" y="999" font-family="Arial, sans-serif" font-size="10" fill="#60a5fa">Equip</text>
+  
+  <!-- Viewing angles row -->
+  <rect x="120" y="1020" width="170" height="22" rx="4" fill="#fbbf24" opacity="0.15"/>
+  <text x="205" y="1036" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">Row 1: 58° EXTREME</text>
+  
+  <rect x="310" y="1020" width="170" height="22" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="395" y="1036" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#22c55e">Row 2: 40° THX IDEAL</text>
+  
+  <rect x="500" y="1020" width="180" height="22" rx="4" fill="#8b5cf6" opacity="0.15"/>
+  <text x="590" y="1036" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a78bfa">10× UMII18-22 Subs</text>
+  
+  <!-- Wire chase indication -->
+  <line x1="620" y1="820" x2="620" y2="815" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="640" y="810" font-family="Arial, sans-serif" font-size="7" fill="#3b82f6">wire chase</text>
+  
+</svg>

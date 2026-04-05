@@ -1,0 +1,6 @@
+# Front Nearfield Subwoofer Cabinet
+# 60.0"W x 31.25"H x 23.0"D
+# Cabinet 1 (left)
+# Coordinates scaled x2.54 (import as cm for inch dimensions)
+# All face normals point away from solid material
+

@@ -1,0 +1,126 @@
+# Speaker System
+## Home Theater System - Rev 5.3 Extract
+
+**Document Purpose:** LCR, surround, and Atmos speaker specifications and placement.
+
+**Source:** Extracted from Home_Theater_System_Complete_Design_Rev5_3.md
+
+**Rev 5.3 Changes:** Corrected surround speaker count (4→6 for proper 9.4.6)
+
+---
+
+## Speaker System
+
+### Main Channels (LCR)
+
+**Model:** DIY Sound Group Titan-815LX (all three channels matched)
+- Left, Center, Right channels
+- Placement: On stage deck (27" elevation), behind 170" acoustically transparent screen
+- Mounted on Sorbothane isolation pucks (STANDARD for reference system)
+- Spacing: Optimized for screen width and acoustic performance
+
+**Speaker Isolation (STANDARD - Essential for Reference System):**
+
+**Product:** Sorbothane 50 Durometer Hemispheres
+- Size: 1.5" diameter × 0.5" thick (hemisphere shape)
+- Durometer: 50 (optimal for Titan-815LX weight range)
+- Load capacity: 20-30 lbs per puck at optimal compression
+- Quantity per speaker: 4 pucks (rectangular pattern)
+- Total system: 12 pucks (3 speakers × 4 pucks)
+- Cost: $72-96 total ($6-8 per puck)
+
+**Installation method:**
+- Position: 4-puck rectangular pattern under each speaker
+- Placement: Inboard 1-2" from speaker edges for stability
+- Pucks positioned at corners of speaker footprint
+- Target compression: 20-30% of puck thickness (visual check for slight bulging)
+- Load per puck: 15-20 lbs (optimal for 60-80 lb speakers)
+
+**Purpose and benefits:**
+- Decouples speakers from stage deck vibration (subwoofers will vibrate deck despite CLD)
+- Eliminates structure-borne vibration transmission to speaker cabinets
+- Preserves clean imaging and soundstage (prevents vibration-induced blur)
+- Reduces cabinet resonance coupling with deck
+- Measurable improvement in waterfall plots and frequency response
+- Essential at reference system investment level
+
+**Installation best practices:**
+- Clean both speaker bottom and stage deck (isopropyl alcohol)
+- Mark puck positions with tape before placement
+- Place pucks on deck first, then carefully lower speaker onto pucks
+- Verify level in both axes (small bubble level)
+- Check stability with gentle rock test
+- Sorbothane is tacky/sticky (naturally adheres to both surfaces)
+- Pucks are reusable and require zero maintenance
+
+**Alternative products considered:**
+- IsoAcoustics ISO-Puck: $180-240 (2-3× cost, marginal improvement)
+- Rubber feet: $10-20 (significantly less effective, degrades over time)
+- Foam pads: $5-10 (minimal isolation, not recommended for reference)
+
+**Recommendation:** Sorbothane hemispheres provide professional-grade isolation at minimal cost. At 0.1% of total system investment, this is essential for reference-level execution and eliminates a potential weak link in imaging performance.
+
+### Surround Speakers
+
+**Side Surrounds (9.4.6 positions 4-5):**
+- Model: DIY Sound Group HT-12
+- Sensitivity: 96 dB (2.83V/1m)
+- Placement: Side walls at seating height
+- Quantity: 2 (left and right)
+
+**Rear Surrounds (9.4.6 positions 6-9):**
+- Model: DIY Sound Group HT-12
+- Sensitivity: 96 dB (2.83V/1m)
+- Placement: Rear wall, mounted above backrest wall
+- Height: 66-72 inches from floor (6-12" above backrest)
+- **Quantity: 4 total** (2 rear left + 2 rear right)
+- **Layout:** Two-row configuration for dual-row seating
+  - Rear surrounds positioned to cover both Row 1 and Row 2
+  - Dolby guidelines: 135-150° from center for each row
+- Acoustic path: Clear (above backrest, no occlusion)
+- Mounting: To actual rear room wall
+- Spacing: Optimized for 16' room width and dual-row coverage
+
+**Total Surround Count: 6 speakers** (2 side + 4 rear = proper 9.4.6 configuration)
+
+### Atmos Height Channels (6 speakers)
+
+**Configuration:** 4 front + 2 rear = 6 total Atmos channels
+
+**Model:** DIY Sound Group Volt-10
+- Type: 10-inch 2-way MTM design (optimized for home theater)
+- Sensitivity: 98 dB @ 2.83V/1m (verified manufacturer specification)
+- Impedance: 8 ohms nominal
+- Frequency response: 55 Hz - 20 kHz
+- Power handling: 200W+ continuous
+- Components: Premium 10" woofer + high-efficiency compression driver
+- Crossover: Optimized for reference-level home theater applications
+
+**Performance Capability:**
+- Base sensitivity: 98 dB @ 1m
+- With 200W amplifier power: 118 dB @ 1m
+- At Row 2 (~3m distance): 108.5 dB (exceeds 105 dB THX Reference by +3.5 dB)
+- At Row 1 (~3.5m distance): 107 dB (exceeds 105 dB THX Reference by +2 dB)
+- Result: Guaranteed reference capability with comfortable headroom at both seating positions
+
+**Why Volt-10 Over DIY Eminence Build:**
+- **Verified performance:** 98 dB sensitivity confirmed by DIYSG (vs. estimated 95-97 dB for DIY build)
+- **Reference headroom:** +3 dB more SPL capability ensures clean dynamics on demanding soundtracks
+- **Better integration:** Designed specifically for home theater reference systems
+- **Larger woofer:** 10" vs 8" provides superior midbass authority for Atmos effects
+- **System consistency:** Matches the reference-level philosophy of LCR, surrounds, and subwoofers
+- **Proven design:** DIYSG's engineering eliminates guesswork
+
+**Placement:**
+- Front Atmos (4 speakers): Above/between LCR on front stage
+- Rear Atmos (2 speakers): Ceiling-mounted above row 2 seating area
+- Height: Standard ceiling mount (~110-120" from floor)
+
+---
+
+---
+
+**Document Version:** 1.1 (Extracted from Rev 5.3) 
+**Created:** November 22, 2024
+**Updated:** November 23, 2024 (Rev 5.3 corrections)
+**Source:** Home_Theater_System_Complete_Design_Rev5_3.md (Speaker System section)

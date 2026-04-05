@@ -1,0 +1,160 @@
+# Home Theater System - Master Index & Navigation
+## Rev 5.2 Documentation Suite
+
+**Last Updated:** November 22, 2025
+**Total Documents:** 15 files
+**Source:** Home_Theater_System_Complete_Design_Rev5_2.md
+
+---
+
+## Quick Navigation
+
+### Core System Documents
+1. **[Project Overview & Room Configuration](computer:///mnt/user-data/outputs/HT/01_Project_Overview_and_Room.md)**
+ - Project goals and timeline (2027 construction)
+ - Room dimensions (16' × 26' × 10')
+ - Acoustic treatment philosophy
+ - Builder capabilities and approach
+
+2. **[Front Stage System](computer:///mnt/user-data/outputs/HT/02_Front_Stage_System.md)**
+ - Three-zone stage platform (corner pockets + center section)
+ - Equipment rack placement (on-stage, beside LCR)
+ - False wall with access panel
+ - 170" acoustically transparent screen
+ - Cable management strategy
+
+3. **[Subwoofer System](computer:///mnt/user-data/outputs/HT/03_Subwoofer_System.md)**
+ - 4× dual-18" sealed subwoofers (8 drivers total)
+ - Dayton UMII18-22 driver specifications
+ - 3" recessed driver mounting with integrated AT covers
+ - PURIFI 1ET9040BA monoblock amplification
+ - Performance: 109 dB @ 20Hz at MLP
+ - DSP configuration (18-20Hz HPF critical)
+
+4. **[Seating & Riser Platform](computer:///mnt/user-data/outputs/HT/04_Seating_and_Riser.md)**
+ - Two-row seating (13' and 18' from screen)
+ - 24" riser with Green Glue CLD
+ - Rear wall system (backrest + AT panels)
+ - Crowson tactile transducer integration
+
+### Speaker & Electronics
+5. **[Speaker System](computer:///mnt/user-data/outputs/HT/05_Speaker_System.md)**
+ - LCR: DIYSG Titan-815LX with Sorbothane isolation
+ - Surrounds: 4× DIYSG HT-12 (96 dB sensitivity)
+ - Atmos: 6× DIYSG Volt-10 (98 dB sensitivity)
+ - Sensitivity matching analysis
+
+6. **[Electronics & Control](computer:///mnt/user-data/outputs/HT/06_Electronics_and_Control.md)**
+ - Marantz AV10 processor (Dirac Live + ART)
+ - Buckeye Hypex amplification (NcX500, NC252MP)
+ - Signal flow and routing
+ - Professional calibration requirements
+ - Projector ($30K budget)
+
+### Infrastructure & Design
+7. **[Lighting & HVAC Systems](computer:///mnt/user-data/outputs/HT/07_Lighting_and_HVAC.md)**
+ - Zero ambient lighting philosophy
+ - Work lights (dimmable, 2700-3000K)
+ - Safety in zero-light environment
+ - HVAC requirements (kitchen-grade CFM)
+
+8. **[Construction Timeline](computer:///mnt/user-data/outputs/HT/08_Construction_Timeline.md)**
+ - 2027 construction schedule
+ - Phase-by-phase sequence (7 phases)
+ - Modular build strategy
+ - Reassessment plan
+
+9. **[Design Decisions & Rationale](computer:///mnt/user-data/outputs/HT/09_Design_Decisions_Rationale.md)**
+ - Equipment selection rationale
+ - Trade-off analysis
+ - Why sealed vs ported subwoofers
+ - No-compromise philosophy
+
+### Budget & Materials
+10. **[Materials & Equipment Lists](computer:///mnt/user-data/outputs/HT/10_Materials_and_Equipment.md)**
+ - Complete bill of materials
+ - Quantities and estimated costs
+ - Vendor information
+ - Current pricing (2024-2025)
+
+11. **[Budget Summary & Analysis](computer:///mnt/user-data/outputs/HT/11_Budget_Summary.md)**
+ - Total system: $75,250-92,969 (with DIY capabilities)
+ - Recommended budget: $80,000-90,000 (with 10% contingency)
+ - Category breakdowns
+ - Revision cost impacts
+
+### Technical Reference
+12. **[Technical Appendix - Subwoofer Engineering](computer:///mnt/user-data/outputs/HT/12_Technical_Appendix_Subwoofers.md)**
+ - Complete T/S parameters (UMII18-22)
+ - WinISD verification
+ - SPL calculation methodology
+ - Corner loading verification
+ - Sealed vs ported analysis
+
+13. **[Safety, Code & Maintenance](computer:///mnt/user-data/outputs/HT/13_Safety_Code_Maintenance.md)**
+ - Electrical code requirements
+ - Structural safety
+ - Fire safety and egress
+ - Maintenance schedules
+ - Long-term care
+
+14. **[Quick Reference & Change History](computer:///mnt/user-data/outputs/HT/14_Quick_Reference.md)**
+ - System specifications at-a-glance
+ - 9.4.6 configuration summary
+ - Complete revision history (Rev 2.0 through 5.2)
+ - Project conclusion
+
+---
+
+## System Overview
+
+**Configuration:** 9.4.6 Dolby Atmos
+- **LCR:** 3× DIYSG Titan-815LX (on stage, behind 170" AT screen)
+- **Surrounds:** 4× DIYSG HT-12 (96 dB sensitivity)
+- **Atmos:** 6× DIYSG Volt-10 (98 dB sensitivity)
+- **Subwoofers:** 4× dual-18" sealed (Dayton UMII18-22)
+- **Tactile:** 6× Crowson transducers
+
+**Performance Targets:**
+- Subwoofers: 109 dB @ 20Hz at MLP (+4 dB above THX Reference)
+- Peak capability: 113+ dB @ 20Hz
+- All channels exceed THX Reference (105 dB) with headroom
+
+**Room:** 16' × 26' × 10' dedicated theater, fully treated
+
+**Budget:** $75K-95K total investment
+
+**Timeline:** Construction planned for 2027
+
+---
+
+## How to Use This Documentation
+
+### First-Time Readers
+1. Start with **File 01** (Project Overview) for context
+2. Review **File 14** (Quick Reference) for system summary
+3. Deep-dive into specific topics as needed
+
+### Builders/Installers
+1. **Files 02-04:** Physical construction (stage, subs, riser)
+2. **Files 05-06:** Speaker and electronics installation
+3. **File 08:** Construction timeline and sequence
+4. **File 13:** Safety and code compliance
+
+### Budget Planning
+1. **File 11:** Budget summary
+2. **File 10:** Detailed materials lists
+3. **File 09:** Design decisions (understand the "why")
+
+### Technical Analysis
+1. **File 03:** Subwoofer system (complete design)
+2. **File 12:** Technical appendix (engineering calculations)
+3. **File 09:** Design rationale (trade-offs)
+
+---
+
+**Master Index Version:** 1.0 
+**Created:** November 22, 2025 
+**Total Files:** 15 (including this index) 
+**Source:** Home_Theater_System_Complete_Design_Rev5_2.md 
+**Status:** Complete documentation suite

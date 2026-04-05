@@ -1,0 +1,261 @@
+# Materials & Equipment Lists
+## Home Theater System - Rev 5.2 Extract
+
+**Document Purpose:** Complete bill of materials with quantities and costs.
+
+**Source:** Extracted from Home_Theater_System_Complete_Design_Rev5_2.md
+
+---
+
+## Material & Equipment Lists
+
+### Front Stage Platform
+
+**Center Solid Section (102" ’ 30"):**
+
+**Lumber (2’6):**
+- Bottom plate: ~30 linear feet
+- Top plate: ~30 linear feet
+- Vertical studs: Calculate for 27" total height (approximately 20-22" stud length)
+ - Number needed: ~15-20 studs (16" OC spacing)
+ - Linear feet: ~30-35 feet
+- Total 2’6: ~90-95 linear feet = 12 boards (8' lengths)
+- **Cost: $84** (12 ’ $7)
+
+**Plywood (CLD deck over center section):**
+- Bottom deck: ~21 square feet (102" ’ 30")
+- Top deck: ~21 square feet
+- Total: ~42 square feet = 1.3 sheets
+- **Purchase: 2 sheets @ $45 = $90**
+
+**Green Glue:**
+- Coverage: 21 sq ft ’· 16 sq ft per tube = 1.3 tubes
+- **Purchase: 2 tubes @ $18 = $36**
+
+**Roxul Safe'n'Sound:**
+- Cavity volume (center section): Estimate 8-10 batts
+- **Cost: $72-90** (8-10 ’ $9)
+
+**Isolation pads (center section only):**
+- Sorbothane pads under stud locations: ~12-15 pads
+- **Cost: $84-105** (12-15 ’ $7)
+
+**Corner Pocket Framing:**
+- Perimeter framing for two pockets (45" ’ 30" each)
+- 2’6 or 2’4 lumber: ~45 linear feet total
+- **Cost: $40** (6 boards ’ $7)
+
+**Front face framing (sub openings):**
+- Frame two 45" ’ 21" openings
+- 2’4 lumber: ~27 linear feet
+- **Cost: $21** (3 boards ’ $7)
+
+**Fasteners:**
+- 3" construction screws, 2" deck screws, joist hangers
+- **Cost: $80**
+
+**Stage platform subtotal: $520-556**
+**Note:** Separate stage front AT panels eliminated (now integrated into sub covers, saves ~$220)
+
+### Front Subwoofer Enclosures (Horizontal, ’2)
+
+**Materials per enclosure (45"W × 21"H × 24"D):**
+- 3/4" MDF: ~2.5 sheets per enclosure = 5 sheets total for two
+- Wood glue, screws, binding posts, acoustic caulk
+- Internal bracing lumber
+- **Estimated per enclosure: $150**
+- **Two front subs: $300**
+
+**Drivers:**
+- 4’ UMII18-22 (two subs ’ 2 drivers each) @ $289 = $1,156
+
+**Front AT fabric panels (stage front, 2 panels):**
+- Dimensions: 45"W × 21"H each
+- Frame: 1’6 lumber (~22 linear feet total) = $22
+- Fabric: Guilford of Maine (~14 sq ft total) @ $12/sq ft = $168
+- Mechanical fasteners: $30
+- **Subtotal: $220**
+
+**Front subwoofer system total: $1,676**
+
+### Rear Subwoofer Enclosures (Vertical, ’2)
+
+**Materials per enclosure (24"W × 42"H × 22"D):**
+- Same volume as front (different orientation)
+- **Two rear subs: $300**
+
+**Drivers:**
+- 4’ UMII18-22 (two subs ’ 2 drivers each) @ $289 = $1,156
+
+**Rear AT fabric panels (existing design):**
+- Already accounted for in riser/rear wall section
+
+**Rear subwoofer system total: $1,456**
+
+### Equipment Rack (Front Stage)
+
+**Rack hardware:**
+- 42U open-frame floor-standing rack: $300-400
+- Rack-mount accessories: $100
+- **Subtotal: $400-500**
+
+**False wall access panel (for rack):**
+- Frame: 1’6 lumber (~30 linear feet) = $30
+- Fabric: Guilford of Maine (~15 sq ft³ @ $12/sq ft = $180
+- Mechanical fasteners: $30
+- **Subtotal: $240**
+
+**Equipment rack total: $640-740**
+
+### Subwoofer System Electronics
+
+**Amplification:**
+- Buckeye PURIFI 1ET9040BA Monoblock (4 units): $3,200-3,600
+
+**DSP:**
+- miniDSP Flex HT: $1,000
+
+**Subwoofer electronics total: $4,200-4,600**
+
+### Riser Platform (Unchanged)
+
+**Materials:**
+- 2’6 lumber: ~50-60 pieces @ $7 = $350-420
+- 3/4" plywood: 8 sheets @ $45 = $360
+- Green Glue: 8 tubes @ $18 = $144
+- Roxul Safe'n'Sound: 25-30 batts @ $9 = $225-270
+- Sorbothane pads: 50-60 @ $7 = $350-420
+- Sorbothane couch pads: 12-16 @ $5 = $60-80
+- Fasteners: $80
+- Acoustic caulk: $24
+
+**Riser total: $1,593-1,798**
+
+### Rear Wall System (Unchanged)
+
+**Solid backrest:**
+- 2’4 lumber, Roxul, fabric, fasteners
+- **Cost: ~$155-190**
+
+**AT panels (’2):**
+- Frame, fabric, fasteners
+- **Cost: ~$160-235**
+
+**Rear wall total: $315-425**
+
+### Crowson Tactile System
+
+**Transducers:**
+- 6’ Crowson @ $200-300 = $1,200-1,800
+
+**Amplification:**
+- Buckeye NC252MP (6-channel): $600-800
+
+**Crowson total: $1,800-2,600**
+
+### Main System Electronics
+
+**AV Processor:**
+- Marantz AV10: $5,500
+
+**Amplifiers:**
+- LCR: Buckeye NcX500 (3-channel): $1,200-1,500
+- Surrounds/Atmos: Buckeye NC252MP units (10+ channels): $1,200-1,800
+
+**Cabling:**
+- HDMI cables (certified 48Gbps): $200-400
+- Balanced XLR (LCR): $150-300
+- Speaker wire (12 AWG): $300-500
+- Subwoofer cables (RCA or XLR): $100-200
+
+**Equipment Rack:**
+- Already included in front stage section
+
+**Electronics total: $8,650-10,700**
+
+### Speakers
+
+**LCR:**
+- 3’ DIYSG Titan-815LX @ $1,500-2,000 = $4,500-6,000
+
+**Surrounds:**
+- 4’ DIYSG HT-12 @ $400-600 = $1,600-2,400
+
+**Atmos:**
+- 6ƒ” DIYSG Volt-10 @ $350-400 = $2,100-2,400
+
+**Speaker isolation (LCR):**
+- Sorbothane pucks: ~$70
+
+**Speakers total: $8,270-10,870**
+
+### Screen & Projector
+
+**Screen:**
+- 170" 2.35:1 Acoustically Transparent: $2,000-4,000
+
+**Projector:**
+- Budget allocation: $30,000 (model TBD in 2027)
+
+**Screen/Projector total: $32,000-34,000**
+
+### Acoustic Treatment
+
+**Materials:**
+- Absorption panels (first reflections, rear wall, ceiling): $2,000-4,000
+- Bass traps (corners, modal control): $1,000-2,000
+- Diffusion (rear wall, side walls): $500-1,500
+
+**Treatment total: $3,500-7,500**
+
+### Seating
+
+**Couches:**
+- 2’ 11-foot couches @ $2,000-4,000 = $4,000-8,000
+
+### Grand Total Estimate (Revised)
+
+**Summary by Category:**
+- Front stage platform: $520-556 (includes larger corner pockets)
+- Front subwoofer system (with 3" recessed drivers & integrated AT covers): $1,821
+- Rear subwoofer system (with 3" recessed drivers & integrated AT covers): $1,786
+- Subwoofer electronics (PURIFI amps, DSP): $4,200-4,600
+- Equipment rack (including access panel): $640-740
+- Riser platform: $1,593-1,798
+- Rear wall system: $315-425
+- Crowson system: $1,800-2,600
+- Main electronics: $8,650-10,700
+- Speakers (including isolation): $8,270-10,870
+- Screen/Projector: $32,000-34,000
+- Acoustic treatment: $3,500-7,500
+- Seating: $4,000-8,000
+- **Total: ~$68,676-85,044**
+
+**Rev 4.1 Cost Impact:**
+- Front subs: +$145 (larger enclosures, integrated covers)
+- Rear subs: +$330 (larger enclosures, integrated covers)
+- Stage platform: +$13 (larger corner pockets)
+- Eliminated: -$220 (separate stage front AT panels)
+- **Net increase: +$268** (improved driver protection and professional appearance)
+
+**Rev 5.0 Cost Impact:**
+- Atmos speakers: +$880-1,180 (DIYSG Volt-10 vs. DIY Eminence build)
+- Benefit: Guaranteed reference capability (107-108 dB) vs. marginal performance (104-105 dB)
+- Result: Eliminates weak link in reference-level system, proper integration across all channels
+
+**Notes:**
+- Prices are estimates based on current market (2024-2025)
+- Actual costs in 2027 may vary
+- Does not include: Tools, consumables (paint, caulk beyond listed), HVAC modifications, electrical work, general room construction
+- Professional calibration: $500-1,500 additional
+- PURIFI amplification adds ~$2,200 over original NC502MP budget but provides critical silent operation and proper headroom
+- Rev 4.1 adds 3" recessed driver mounting with integrated AT covers for +$268 net cost (improved protection and aesthetics)
+- Rev 5.0 upgrades Atmos to DIYSG Volt-10 for +$880-1,180 (eliminates performance weak link, ensures reference capability)
+
+---
+
+---
+
+**Document Version:** 1.0 (Extracted from Rev 5.2) 
+**Created:** November 22, 2025 
+**Source:** Home_Theater_System_Complete_Design_Rev5_2.md (Materials & Equipment section)
