@@ -1,2 +1,5 @@
-pi = 3.14159265358979323846
-e = 2.7182818285
+A theater built in a garage,
+With subs that could rattle the Taj,
+Eight eighteens in the corners,
+Like bass-driven mourners,
+Shook the walls in a seismic barrage.
