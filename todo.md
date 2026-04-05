@@ -126,9 +126,9 @@ without the laptop needing to be on.
   replace with generic "Central NC" or leave as-is (city-level, not identifying).
 
 **Steps:**
-- [ ] Create repo `TeaTime424/theater-shared` (public) on GitHub
-- [ ] Write a sync script that exports eligible MD files, strips PII patterns
+- [x] Create repo `TeaTime424/theater-shared` (public) on GitHub
+- [x] Write a sync script that exports eligible MD files, strips PII patterns → `tools/sync_shared.py`
 - [ ] Add GitHub Action or local hook to auto-sync on push to monorepo
 - [ ] Test: clone from claude.ai/code cloud session, verify read+write+push
-- [ ] Add CLAUDE.md to shared repo explaining its purpose and sync relationship
-- [ ] Update laptop CLAUDE.md with instructions to push to both repos on commit
+- [x] Add CLAUDE.md to shared repo explaining its purpose and sync relationship → `SHARED_CLAUDE.md`
+- [x] Update laptop CLAUDE.md with instructions to push to both repos on commit

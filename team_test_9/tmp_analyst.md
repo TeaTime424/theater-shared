@@ -40,7 +40,7 @@
 ADVISORY — COST CUTTER:
 - **MrCool DIY 12K $2,359**: System MSRP is stated; no shipping cited. Online sellers typically add $0-$150 shipping. Investigation notes flag a $750 budget gap from an earlier $1,800 allocation. Verify current street price before build.
 - **Partition drywall + finish $600**: Two-sided drywall on a 23 ft wall is 23 ft x 10 ft x 2 sides = 460 sq ft. At $600 that is $1.30/sq ft for material + labor. Labor alone typically runs $1.50-$2.50/sq ft. **Likely underestimated.** Flag for recheck.
-- **Permits $800**: NC Sanford area — building + electrical + HVAC permits. Could run $400-$1,500 depending on project valuation. Unsourced, no quote.
+- **Permits $800**: Central NC area — building + electrical + HVAC permits. Could run $400-$1,500 depending on project valuation. Unsourced, no quote.
 - **Carpet $1,000**: 391 sq ft at $2.56/sq ft installed. Big-box supply-only is ~$1-$2/sq ft; professional install adds $1-$2/sq ft more. $1,000 is plausible for budget carpet DIY-install but tight. No shipping for underlayment.
 
 ---

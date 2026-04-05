@@ -89,7 +89,7 @@ With corrected Dirac pricing ($947 vs $799): grand total shortfall **~$1,255**.
 ADVISORY — COST CUTTER:
 
 - **Partition drywall $600**: Two-sided drywall on 23 ft × 10 ft wall = 460 sq ft. At $600 that is $1.30/sq ft material + labor. Labor alone is typically $1.50–$2.50/sq ft. This line is likely underestimated by $300–$600. Flag for recheck.
-- **Permits $800**: No source, no quote. Sanford NC area building + electrical + HVAC permits could run $400–$1,500 depending on project valuation. Unsourced estimate.
+- **Permits $800**: No source, no quote. Central NC area building + electrical + HVAC permits could run $400–$1,500 depending on project valuation. Unsourced estimate.
 - **Sub enclosures $1,400**: $350/cabinet DIY for 24"×24"×72" sealed MDF construction. Each cabinet needs ~4–5 sheets of 3/4" MDF ($45–$65/sheet = $180–$325 material alone). Bracing, screws, glue, damping material not costed. This line is tight — $500–$600/cabinet is more realistic.
 - **JVC NZ500 $5,999 + screen $1,000**: No shipping lines in budget. Projector shipping from authorized dealer: typically $0–$200. AT screen shipping for 170" frame: can run $100–$300 for freight. Missing from Phase 2.
 - **Seating $2,000**: Two recliner couches at $1,000 each, no sourcing. Theater-grade recliner couches often run $800–$2,500+ each. If owner upgrades, this line is vulnerable to 50–100% overrun.

@@ -30,7 +30,7 @@ These values assume: not more than 3 current-carrying conductors in raceway/cabl
 
 ### Temperature Derating (Central NC)
 
-Sanford NC summer ambient temperatures routinely reach 95-100F (35-38C). Inside an attic or conduit exposed to direct sun, temperatures can reach 40-50C.
+Central NC summer ambient temperatures routinely reach 95-100F (35-38C). Inside an attic or conduit exposed to direct sun, temperatures can reach 40-50C.
 
 NEC Table 310.15(B)(2)(a) correction factors for 75C conductors:
 

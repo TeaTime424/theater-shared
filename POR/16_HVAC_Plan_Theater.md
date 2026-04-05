@@ -30,7 +30,7 @@ Equipment rack is **fully outside the theater** in the adjacent gym space, therm
 |-------------|--------|-------|
 | Occupants (max 2 sedentary) | ~800 | 400 BTU/hr per person |
 | Projector | ~1,000–1,500 | Laser projector, ceiling-mounted |
-| Envelope (walls/ceiling) | ~2,000–3,500 | Sanford NC climate, insulated construction |
+| Envelope (walls/ceiling) | ~2,000–3,500 | Central NC climate, insulated construction |
 | Lighting (work lights, off during viewing) | ~500 | Only relevant during setup |
 | **Total peak** | **~4,300–6,300 BTU/hr** | |
 

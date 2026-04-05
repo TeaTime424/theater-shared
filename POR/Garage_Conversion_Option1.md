@@ -1176,7 +1176,7 @@ A half bath can be added to the gym side later (SW corner, near plumbing entry p
 | Projector | $25-30K | JVC NZ500 $6K | Same | Native 4K D-ILA |
 | Budget (out-of-pocket) | ~$65-70K | ~$57K | **~$48,700** | X6800H + fewer Volt-10s + ICEpower + ADAU1452 + deferrals |
 | Budget (Phase 2 spend) | — | ~$33K | **~$26,200** | -$6,800 |
-| Labor | Not specified | All owner DIY | Same | Sanford NC, Lee County |
+| Labor | Not specified | All owner DIY | Same | Central NC, Lee County |
 | Base revision | Rev 6.0 | Rev 7.0 | Rev 7.0 | Current POR |
 
 ---
@@ -1198,7 +1198,7 @@ A half bath can be added to the gym side later (SW corner, near plumbing entry p
 **Changes v2.0:** Real building dimensions (29'×23'), full conversion scope (gym+theater+WC), Rev 7.0 alignment, property value analysis, corrected Volt-10 sensitivity, restored bass shakers + miniDSP, HVAC + plumbing scope
 **Changes v2.1:** Added owned inventory (LCR, 2 subs, treatment materials = $9,750), projector budget reduced to $5K, budget restructured to show remaining spend vs full value
 **Changes v2.2:** Projector POR set to JVC DLA-NZ500 ($5,999) — native 4K D-ILA, laser, 40,000:1 native contrast, best-in-class for dedicated dark room
-**Changes v2.3:** Budget split into Phase 1 (Building Prep) and Phase 2 (Home Theater); all work owner DIY with $0 labor; NC homeowner permit notes (Sanford, Lee County); granular line-item breakdown (102 items, no line >$1K except projector and AVR); total out-of-pocket revised to ~$57K
+**Changes v2.3:** Budget split into Phase 1 (Building Prep) and Phase 2 (Home Theater); all work owner DIY with $0 labor; NC homeowner permit notes (Central NC, Lee County); granular line-item breakdown (102 items, no line >$1K except projector and AVR); total out-of-pocket revised to ~$57K
 **Changes v3.0:** Processor changed from Denon AVR-A1H ($6,500) to Denon AVR-X6800H ($3,700); config changed from 9.4.6 to 9.4.4 (dropped middle heights TML/TMR); LCR + front wide amplification via ATI AT525NC (5ch NCore, already owned) through X6800H pre-outs; X6800H internal amps for 8 surround/height channels; owned inventory updated to $13,450 (added ATI AT525NC + Denon X4700 spare); Volt-10 count reduced from 12 to 10; out-of-pocket revised to ~$53,700
 **Changes v3.1:** Added Option B — non-permanent installation using full 29'×23' garage with freestanding false walls over garage doors, no structural conversion, $35.4K out-of-pocket vs $53.7K full conversion. Status: under consideration, not adopted as POR.
 **Changes v3.2:** Added Option C — partition only, no gym/WC finish. Build theater partition walls + equipment room + HVAC for theater only, leave garage side raw. Same 14'×25' theater as POR (all specs apply unchanged), $41K out-of-pocket. Garage side remains usable. Status: under consideration.
