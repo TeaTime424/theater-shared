@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "afterEdit": [
+      {
+        "command": "cd /home/user/theater-shared && git add -A && git diff --cached --quiet || (git commit -m \"auto: update files\" && git push -u origin claude/subwoofer-por-garage-XYlz2)",
+        "description": "Auto-commit and push after edit"
+      }
+    ],
+    "afterWrite": [
+      {
+        "command": "cd /home/user/theater-shared && git add -A && git diff --cached --quiet || (git commit -m \"auto: update files\" && git push -u origin claude/subwoofer-por-garage-XYlz2)",
+        "description": "Auto-commit and push after write"
+      }
+    ]
+  }
+}
